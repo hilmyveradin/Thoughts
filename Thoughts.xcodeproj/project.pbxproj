@@ -1,0 +1,731 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		01419F6F2818A93F0095A17A /* ThoughtViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01419F6E2818A93F0095A17A /* ThoughtViewViewModel.swift */; };
+		01419F712818E23A0095A17A /* ThoughtListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01419F702818E23A0095A17A /* ThoughtListViewModel.swift */; };
+		016124652816BDAE006ACB35 /* AddThoughtsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016124642816BDAE006ACB35 /* AddThoughtsViewController.swift */; };
+		019CDB5428177D110066D10B /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 019CDB3B28177CA10066D10B /* WidgetKit.framework */; };
+		019CDB5528177D110066D10B /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 019CDB3D28177CA10066D10B /* SwiftUI.framework */; };
+		019CDB5828177D110066D10B /* ThoughtsWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019CDB5728177D110066D10B /* ThoughtsWidget.swift */; };
+		019CDB5A28177D120066D10B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 019CDB5928177D120066D10B /* Assets.xcassets */; };
+		019CDB5E28177D120066D10B /* ThoughtsWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 019CDB5328177D110066D10B /* ThoughtsWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		019CDB642817CEFB0066D10B /* ThoughtsData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 019CDB622817CEFB0066D10B /* ThoughtsData.xcdatamodeld */; };
+		019CDB662817D0EA0066D10B /* ThoughtsDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019CDB652817D0EA0066D10B /* ThoughtsDataManager.swift */; };
+		019CDB692817DA830066D10B /* DataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019CDB682817DA830066D10B /* DataHelpers.swift */; };
+		019CDB6B2817E83D0066D10B /* ThoughtsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019CDB6A2817E83D0066D10B /* ThoughtsCell.swift */; };
+		01D089312816953B00E9E9FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D089302816953B00E9E9FF /* AppDelegate.swift */; };
+		01D089332816953B00E9E9FF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D089322816953B00E9E9FF /* SceneDelegate.swift */; };
+		01D089352816953B00E9E9FF /* ThoughtListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D089342816953B00E9E9FF /* ThoughtListViewController.swift */; };
+		01D0893A2816953C00E9E9FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01D089392816953C00E9E9FF /* Assets.xcassets */; };
+		01D0893D2816953C00E9E9FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01D0893B2816953C00E9E9FF /* LaunchScreen.storyboard */; };
+		01D0896A28169BC300E9E9FF /* AnchorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D0896928169BC300E9E9FF /* AnchorExtensions.swift */; };
+		01D0896C28169C7900E9E9FF /* ProgrammaticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D0896B28169C7900E9E9FF /* ProgrammaticView.swift */; };
+		705D4B8D9A70DD1E76E9E3A2 /* Pods_ThoughtsWidgetExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9033F4070F8AD0E05A8AFA57 /* Pods_ThoughtsWidgetExtension.framework */; };
+		BF1D850931CBFDA936D053CF /* Pods_Thoughts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A37E70B5D4323CEDAA0C827C /* Pods_Thoughts.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		019CDB5C28177D120066D10B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 01D089252816953B00E9E9FF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 019CDB5228177D110066D10B;
+			remoteInfo = ThoughtsWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		019CDB4B28177CA20066D10B /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				019CDB5E28177D120066D10B /* ThoughtsWidgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		01419F6E2818A93F0095A17A /* ThoughtViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThoughtViewViewModel.swift; sourceTree = "<group>"; };
+		01419F702818E23A0095A17A /* ThoughtListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThoughtListViewModel.swift; sourceTree = "<group>"; };
+		0143CAC508A858DAA1E3B493 /* Pods-ThoughtsWidgetExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThoughtsWidgetExtension.debug.xcconfig"; path = "Target Support Files/Pods-ThoughtsWidgetExtension/Pods-ThoughtsWidgetExtension.debug.xcconfig"; sourceTree = "<group>"; };
+		016124642816BDAE006ACB35 /* AddThoughtsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddThoughtsViewController.swift; sourceTree = "<group>"; };
+		019CDB3B28177CA10066D10B /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		019CDB3D28177CA10066D10B /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		019CDB5328177D110066D10B /* ThoughtsWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ThoughtsWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		019CDB5728177D110066D10B /* ThoughtsWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThoughtsWidget.swift; sourceTree = "<group>"; };
+		019CDB5928177D120066D10B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		019CDB5B28177D120066D10B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		019CDB632817CEFB0066D10B /* ThoughtsData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ThoughtsData.xcdatamodel; sourceTree = "<group>"; };
+		019CDB652817D0EA0066D10B /* ThoughtsDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThoughtsDataManager.swift; sourceTree = "<group>"; };
+		019CDB682817DA830066D10B /* DataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHelpers.swift; sourceTree = "<group>"; };
+		019CDB6A2817E83D0066D10B /* ThoughtsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThoughtsCell.swift; sourceTree = "<group>"; };
+		01D0892D2816953B00E9E9FF /* Thoughts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Thoughts.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		01D089302816953B00E9E9FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		01D089322816953B00E9E9FF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		01D089342816953B00E9E9FF /* ThoughtListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThoughtListViewController.swift; sourceTree = "<group>"; };
+		01D089392816953C00E9E9FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		01D0893C2816953C00E9E9FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		01D0893E2816953C00E9E9FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01D0896928169BC300E9E9FF /* AnchorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnchorExtensions.swift; sourceTree = "<group>"; };
+		01D0896B28169C7900E9E9FF /* ProgrammaticView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgrammaticView.swift; sourceTree = "<group>"; };
+		09B0C56AD144D540732C6F3D /* Pods-Thoughts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Thoughts.debug.xcconfig"; path = "Target Support Files/Pods-Thoughts/Pods-Thoughts.debug.xcconfig"; sourceTree = "<group>"; };
+		2E8ED7DB80C2EB917D4F314B /* Pods-Thoughts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Thoughts.release.xcconfig"; path = "Target Support Files/Pods-Thoughts/Pods-Thoughts.release.xcconfig"; sourceTree = "<group>"; };
+		9033F4070F8AD0E05A8AFA57 /* Pods_ThoughtsWidgetExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ThoughtsWidgetExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A37E70B5D4323CEDAA0C827C /* Pods_Thoughts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Thoughts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8941DEC0272CC0A72981DEE /* Pods-ThoughtsWidgetExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThoughtsWidgetExtension.release.xcconfig"; path = "Target Support Files/Pods-ThoughtsWidgetExtension/Pods-ThoughtsWidgetExtension.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		019CDB5028177D110066D10B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				019CDB5528177D110066D10B /* SwiftUI.framework in Frameworks */,
+				019CDB5428177D110066D10B /* WidgetKit.framework in Frameworks */,
+				705D4B8D9A70DD1E76E9E3A2 /* Pods_ThoughtsWidgetExtension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		01D0892A2816953B00E9E9FF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF1D850931CBFDA936D053CF /* Pods_Thoughts.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		019CDB3A28177CA10066D10B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				019CDB3B28177CA10066D10B /* WidgetKit.framework */,
+				019CDB3D28177CA10066D10B /* SwiftUI.framework */,
+				A37E70B5D4323CEDAA0C827C /* Pods_Thoughts.framework */,
+				9033F4070F8AD0E05A8AFA57 /* Pods_ThoughtsWidgetExtension.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		019CDB5628177D110066D10B /* ThoughtsWidget */ = {
+			isa = PBXGroup;
+			children = (
+				019CDB5728177D110066D10B /* ThoughtsWidget.swift */,
+				019CDB5928177D120066D10B /* Assets.xcassets */,
+				019CDB5B28177D120066D10B /* Info.plist */,
+			);
+			path = ThoughtsWidget;
+			sourceTree = "<group>";
+		};
+		019CDB672817DA680066D10B /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				019CDB652817D0EA0066D10B /* ThoughtsDataManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		01D089242816953B00E9E9FF = {
+			isa = PBXGroup;
+			children = (
+				01D0892F2816953B00E9E9FF /* Thoughts */,
+				019CDB5628177D110066D10B /* ThoughtsWidget */,
+				019CDB3A28177CA10066D10B /* Frameworks */,
+				01D0892E2816953B00E9E9FF /* Products */,
+				BD27C05962107122DF23E11B /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		01D0892E2816953B00E9E9FF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				01D0892D2816953B00E9E9FF /* Thoughts.app */,
+				019CDB5328177D110066D10B /* ThoughtsWidgetExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		01D0892F2816953B00E9E9FF /* Thoughts */ = {
+			isa = PBXGroup;
+			children = (
+				01D089442816955200E9E9FF /* Base */,
+				01D08948281695BB00E9E9FF /* Model */,
+				01D089462816957300E9E9FF /* ViewController */,
+				01D089472816958500E9E9FF /* ViewModel */,
+				01D089452816956A00E9E9FF /* View */,
+				01D0896D28169C8000E9E9FF /* Protocols */,
+				019CDB672817DA680066D10B /* Manager */,
+				01D089392816953C00E9E9FF /* Assets.xcassets */,
+				01D0893E2816953C00E9E9FF /* Info.plist */,
+			);
+			path = Thoughts;
+			sourceTree = "<group>";
+		};
+		01D089442816955200E9E9FF /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				01D089302816953B00E9E9FF /* AppDelegate.swift */,
+				01D089322816953B00E9E9FF /* SceneDelegate.swift */,
+				01D0896928169BC300E9E9FF /* AnchorExtensions.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		01D089452816956A00E9E9FF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				01D0893B2816953C00E9E9FF /* LaunchScreen.storyboard */,
+				019CDB6A2817E83D0066D10B /* ThoughtsCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		01D089462816957300E9E9FF /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				01D089342816953B00E9E9FF /* ThoughtListViewController.swift */,
+				016124642816BDAE006ACB35 /* AddThoughtsViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		01D089472816958500E9E9FF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				01419F6E2818A93F0095A17A /* ThoughtViewViewModel.swift */,
+				01419F702818E23A0095A17A /* ThoughtListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		01D08948281695BB00E9E9FF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				019CDB622817CEFB0066D10B /* ThoughtsData.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		01D0896D28169C8000E9E9FF /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				01D0896B28169C7900E9E9FF /* ProgrammaticView.swift */,
+				019CDB682817DA830066D10B /* DataHelpers.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		BD27C05962107122DF23E11B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				09B0C56AD144D540732C6F3D /* Pods-Thoughts.debug.xcconfig */,
+				2E8ED7DB80C2EB917D4F314B /* Pods-Thoughts.release.xcconfig */,
+				0143CAC508A858DAA1E3B493 /* Pods-ThoughtsWidgetExtension.debug.xcconfig */,
+				D8941DEC0272CC0A72981DEE /* Pods-ThoughtsWidgetExtension.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		019CDB5228177D110066D10B /* ThoughtsWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 019CDB5F28177D120066D10B /* Build configuration list for PBXNativeTarget "ThoughtsWidgetExtension" */;
+			buildPhases = (
+				A5056886CB515E99F90B3BEC /* [CP] Check Pods Manifest.lock */,
+				019CDB4F28177D110066D10B /* Sources */,
+				019CDB5028177D110066D10B /* Frameworks */,
+				019CDB5128177D110066D10B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ThoughtsWidgetExtension;
+			productName = ThoughtsWidgetExtension;
+			productReference = 019CDB5328177D110066D10B /* ThoughtsWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		01D0892C2816953B00E9E9FF /* Thoughts */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 01D089412816953C00E9E9FF /* Build configuration list for PBXNativeTarget "Thoughts" */;
+			buildPhases = (
+				DC4C23EC0E7A13AA78315A53 /* [CP] Check Pods Manifest.lock */,
+				01D089292816953B00E9E9FF /* Sources */,
+				01D0892A2816953B00E9E9FF /* Frameworks */,
+				01D0892B2816953B00E9E9FF /* Resources */,
+				019CDB4B28177CA20066D10B /* Embed App Extensions */,
+				959136684C9211FA2DA5E582 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				019CDB5D28177D120066D10B /* PBXTargetDependency */,
+			);
+			name = Thoughts;
+			productName = Thoughts;
+			productReference = 01D0892D2816953B00E9E9FF /* Thoughts.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		01D089252816953B00E9E9FF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1330;
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					019CDB5228177D110066D10B = {
+						CreatedOnToolsVersion = 13.3;
+					};
+					01D0892C2816953B00E9E9FF = {
+						CreatedOnToolsVersion = 13.3;
+					};
+				};
+			};
+			buildConfigurationList = 01D089282816953B00E9E9FF /* Build configuration list for PBXProject "Thoughts" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 01D089242816953B00E9E9FF;
+			productRefGroup = 01D0892E2816953B00E9E9FF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				01D0892C2816953B00E9E9FF /* Thoughts */,
+				019CDB5228177D110066D10B /* ThoughtsWidgetExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		019CDB5128177D110066D10B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				019CDB5A28177D120066D10B /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		01D0892B2816953B00E9E9FF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01D0893D2816953C00E9E9FF /* LaunchScreen.storyboard in Resources */,
+				01D0893A2816953C00E9E9FF /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		959136684C9211FA2DA5E582 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Thoughts/Pods-Thoughts-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Thoughts/Pods-Thoughts-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Thoughts/Pods-Thoughts-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A5056886CB515E99F90B3BEC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ThoughtsWidgetExtension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DC4C23EC0E7A13AA78315A53 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Thoughts-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		019CDB4F28177D110066D10B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				019CDB5828177D110066D10B /* ThoughtsWidget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		01D089292816953B00E9E9FF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01D0896C28169C7900E9E9FF /* ProgrammaticView.swift in Sources */,
+				019CDB692817DA830066D10B /* DataHelpers.swift in Sources */,
+				01419F6F2818A93F0095A17A /* ThoughtViewViewModel.swift in Sources */,
+				01D0896A28169BC300E9E9FF /* AnchorExtensions.swift in Sources */,
+				019CDB642817CEFB0066D10B /* ThoughtsData.xcdatamodeld in Sources */,
+				01D089352816953B00E9E9FF /* ThoughtListViewController.swift in Sources */,
+				01D089312816953B00E9E9FF /* AppDelegate.swift in Sources */,
+				016124652816BDAE006ACB35 /* AddThoughtsViewController.swift in Sources */,
+				01419F712818E23A0095A17A /* ThoughtListViewModel.swift in Sources */,
+				019CDB6B2817E83D0066D10B /* ThoughtsCell.swift in Sources */,
+				01D089332816953B00E9E9FF /* SceneDelegate.swift in Sources */,
+				019CDB662817D0EA0066D10B /* ThoughtsDataManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		019CDB5D28177D120066D10B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 019CDB5228177D110066D10B /* ThoughtsWidgetExtension */;
+			targetProxy = 019CDB5C28177D120066D10B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		01D0893B2816953C00E9E9FF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				01D0893C2816953C00E9E9FF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		019CDB6028177D120066D10B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0143CAC508A858DAA1E3B493 /* Pods-ThoughtsWidgetExtension.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = R5743U27B6;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ThoughtsWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ThoughtsWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hilmyveradin.Thoughts.ThoughtsWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		019CDB6128177D120066D10B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D8941DEC0272CC0A72981DEE /* Pods-ThoughtsWidgetExtension.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = R5743U27B6;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ThoughtsWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ThoughtsWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hilmyveradin.Thoughts.ThoughtsWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		01D0893F2816953C00E9E9FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		01D089402816953C00E9E9FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		01D089422816953C00E9E9FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 09B0C56AD144D540732C6F3D /* Pods-Thoughts.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = R5743U27B6;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Thoughts/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hilmyveradin.Thoughts;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		01D089432816953C00E9E9FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E8ED7DB80C2EB917D4F314B /* Pods-Thoughts.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = R5743U27B6;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Thoughts/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hilmyveradin.Thoughts;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		019CDB5F28177D120066D10B /* Build configuration list for PBXNativeTarget "ThoughtsWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				019CDB6028177D120066D10B /* Debug */,
+				019CDB6128177D120066D10B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		01D089282816953B00E9E9FF /* Build configuration list for PBXProject "Thoughts" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01D0893F2816953C00E9E9FF /* Debug */,
+				01D089402816953C00E9E9FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		01D089412816953C00E9E9FF /* Build configuration list for PBXNativeTarget "Thoughts" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01D089422816953C00E9E9FF /* Debug */,
+				01D089432816953C00E9E9FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		019CDB622817CEFB0066D10B /* ThoughtsData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				019CDB632817CEFB0066D10B /* ThoughtsData.xcdatamodel */,
+			);
+			currentVersion = 019CDB632817CEFB0066D10B /* ThoughtsData.xcdatamodel */;
+			path = ThoughtsData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 01D089252816953B00E9E9FF /* Project object */;
+}
