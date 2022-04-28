@@ -56,7 +56,6 @@ class ThoughtsManagerCoreData {
     let texts = try! ThoughtsManagerCoreData.shared.managedContext.fetch(request)
     
     if texts.count > 0 {
-      //      print("Manager: Fetch Goals, of Goals: \(texts.count)")
       return texts
     } else {
       print("texts.count = 0")
@@ -89,9 +88,8 @@ class ThoughtsManagerCoreData {
     do {
       try context.execute(batchDeleteRequest)
       print("deleted")
-    } catch let error as NSError {
+    } catch {
       print("failed")
-      
     }
   }
   
@@ -105,15 +103,4 @@ class ThoughtsManagerCoreData {
       fatalError("error delete data")
     }
   }
-  
-  //  func saveThoughts(titleText: String, descText: String, date: Date) {
-  //    let context = ThoughtsManagerCoreData.shared.managedContext
-  //    let text = Texts(context: context)
-  //
-  //    text.textTitle = titleText
-  //    text.textDescription = descText
-  //    text.dateInput = date
-  //
-  //    saveContext()
-  //  }
 }

@@ -40,11 +40,6 @@ class ThoughtsCell: UITableViewCell, ProgrammaticView {
     fatalError("init(coder:) has not been implemented")
   }
   
-  //MARK: - Helpers
-  func configure(viewModel: ThoughtViewViewModel) {
-    thoughtsTitle.text = viewModel.textTitle
-    thoughtsDesc.text = viewModel.textDescription
-  }
   
   //MARK: - Setup Views
   func setupView() {

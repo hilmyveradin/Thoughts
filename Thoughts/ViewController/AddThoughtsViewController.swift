@@ -114,8 +114,6 @@ extension AddThoughtsViewController {
     let titleText = titleTextField.text ?? ""
     let descText = thoughtsTextView.text ?? ""
     let date = Date()
-
-//    ThoughtsDataManager.shared.saveThought(titleText: titleText, descText: descText, date: date)
     ThoughtsManagerCoreData.shared.saveThought(titleText: titleText, descText: descText, date: date)
   }
 }

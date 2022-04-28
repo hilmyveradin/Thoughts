@@ -12,16 +12,11 @@
 		012A4D7E281A7AED00AA0E19 /* DigitalThoughts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012A4D7D281A7AED00AA0E19 /* DigitalThoughts.swift */; };
 		012A4D80281A7AEE00AA0E19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 012A4D7F281A7AEE00AA0E19 /* Assets.xcassets */; };
 		012A4D84281A7AEE00AA0E19 /* DigitalThoughtsExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 012A4D79281A7AED00AA0E19 /* DigitalThoughtsExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		01419F6F2818A93F0095A17A /* ThoughtViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01419F6E2818A93F0095A17A /* ThoughtViewViewModel.swift */; };
 		01419F712818E23A0095A17A /* ThoughtListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01419F702818E23A0095A17A /* ThoughtListViewModel.swift */; };
 		01419F732818EEB40095A17A /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01419F722818EEB40095A17A /* UIColorExtension.swift */; };
 		01419F75281A31780095A17A /* ThoughtsManagerCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01419F74281A31780095A17A /* ThoughtsManagerCoreData.swift */; };
-		01419F77281A36790095A17A /* ThoughtsRxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01419F76281A36790095A17A /* ThoughtsRxViewController.swift */; };
-		01419F79281A6CEA0095A17A /* AddThoughtsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01419F78281A6CEA0095A17A /* AddThoughtsViewModel.swift */; };
 		016124652816BDAE006ACB35 /* AddThoughtsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016124642816BDAE006ACB35 /* AddThoughtsViewController.swift */; };
 		019CDB642817CEFB0066D10B /* ThoughtsData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 019CDB622817CEFB0066D10B /* ThoughtsData.xcdatamodeld */; };
-		019CDB662817D0EA0066D10B /* ThoughtsDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019CDB652817D0EA0066D10B /* ThoughtsDataManager.swift */; };
-		019CDB692817DA830066D10B /* DataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019CDB682817DA830066D10B /* DataHelpers.swift */; };
 		019CDB6B2817E83D0066D10B /* ThoughtsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019CDB6A2817E83D0066D10B /* ThoughtsCell.swift */; };
 		01D089312816953B00E9E9FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D089302816953B00E9E9FF /* AppDelegate.swift */; };
 		01D089332816953B00E9E9FF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D089322816953B00E9E9FF /* SceneDelegate.swift */; };
@@ -62,18 +57,13 @@
 		012A4D7D281A7AED00AA0E19 /* DigitalThoughts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigitalThoughts.swift; sourceTree = "<group>"; };
 		012A4D7F281A7AEE00AA0E19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		012A4D81281A7AEE00AA0E19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		01419F6E2818A93F0095A17A /* ThoughtViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThoughtViewViewModel.swift; sourceTree = "<group>"; };
 		01419F702818E23A0095A17A /* ThoughtListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThoughtListViewModel.swift; sourceTree = "<group>"; };
 		01419F722818EEB40095A17A /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		01419F74281A31780095A17A /* ThoughtsManagerCoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThoughtsManagerCoreData.swift; sourceTree = "<group>"; };
-		01419F76281A36790095A17A /* ThoughtsRxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThoughtsRxViewController.swift; sourceTree = "<group>"; };
-		01419F78281A6CEA0095A17A /* AddThoughtsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddThoughtsViewModel.swift; sourceTree = "<group>"; };
 		016124642816BDAE006ACB35 /* AddThoughtsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddThoughtsViewController.swift; sourceTree = "<group>"; };
 		019CDB3B28177CA10066D10B /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		019CDB3D28177CA10066D10B /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		019CDB632817CEFB0066D10B /* ThoughtsData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ThoughtsData.xcdatamodel; sourceTree = "<group>"; };
-		019CDB652817D0EA0066D10B /* ThoughtsDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThoughtsDataManager.swift; sourceTree = "<group>"; };
-		019CDB682817DA830066D10B /* DataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHelpers.swift; sourceTree = "<group>"; };
 		019CDB6A2817E83D0066D10B /* ThoughtsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThoughtsCell.swift; sourceTree = "<group>"; };
 		01D0892D2816953B00E9E9FF /* Thoughts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Thoughts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01D089302816953B00E9E9FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -137,7 +127,6 @@
 		019CDB672817DA680066D10B /* Manager */ = {
 			isa = PBXGroup;
 			children = (
-				019CDB652817D0EA0066D10B /* ThoughtsDataManager.swift */,
 				01419F74281A31780095A17A /* ThoughtsManagerCoreData.swift */,
 			);
 			path = Manager;
@@ -204,7 +193,6 @@
 			children = (
 				01D089342816953B00E9E9FF /* ThoughtListViewController.swift */,
 				016124642816BDAE006ACB35 /* AddThoughtsViewController.swift */,
-				01419F76281A36790095A17A /* ThoughtsRxViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -212,9 +200,7 @@
 		01D089472816958500E9E9FF /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				01419F6E2818A93F0095A17A /* ThoughtViewViewModel.swift */,
 				01419F702818E23A0095A17A /* ThoughtListViewModel.swift */,
-				01419F78281A6CEA0095A17A /* AddThoughtsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -231,7 +217,6 @@
 			isa = PBXGroup;
 			children = (
 				01D0896B28169C7900E9E9FF /* ProgrammaticView.swift */,
-				019CDB682817DA830066D10B /* DataHelpers.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -400,11 +385,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01419F79281A6CEA0095A17A /* AddThoughtsViewModel.swift in Sources */,
-				01419F77281A36790095A17A /* ThoughtsRxViewController.swift in Sources */,
 				01D0896C28169C7900E9E9FF /* ProgrammaticView.swift in Sources */,
-				019CDB692817DA830066D10B /* DataHelpers.swift in Sources */,
-				01419F6F2818A93F0095A17A /* ThoughtViewViewModel.swift in Sources */,
 				01D0896A28169BC300E9E9FF /* AnchorExtensions.swift in Sources */,
 				019CDB642817CEFB0066D10B /* ThoughtsData.xcdatamodeld in Sources */,
 				01D089352816953B00E9E9FF /* ThoughtListViewController.swift in Sources */,
@@ -415,7 +396,6 @@
 				01419F712818E23A0095A17A /* ThoughtListViewModel.swift in Sources */,
 				019CDB6B2817E83D0066D10B /* ThoughtsCell.swift in Sources */,
 				01D089332816953B00E9E9FF /* SceneDelegate.swift in Sources */,
-				019CDB662817D0EA0066D10B /* ThoughtsDataManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
