@@ -44,18 +44,19 @@ class ThoughtsManagerCoreData {
   
   // MARK: - return observable todo
   public func fetchObservableData() -> Observable<[Texts]> {
+    print("Manager: fetch observable data called")
     textsFromCoreData.accept(fetchThoughs())
     return textsFromCoreData.asObservable()
   }
   
   // MARK: -  Texts Functions
   func fetchThoughs() -> [Texts] {
-    print("fetch thoughts called")
+    print("Manager: fetch thoughts called")
     let request = NSFetchRequest<Texts>(entityName: "Texts")
     let texts = try! ThoughtsManagerCoreData.shared.managedContext.fetch(request)
     
     if texts.count > 0 {
-      print("Manager: Fetch Goals, of Goals: \(texts.count)")
+//      print("Manager: Fetch Goals, of Goals: \(texts.count)")
       return texts
     } else {
       print("texts.count = 0")
@@ -77,6 +78,20 @@ class ThoughtsManagerCoreData {
       print("thought saved!")
     } catch {
         fatalError("error saving data")
+    }
+  }
+  
+  func deleteAll() {
+    let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Texts")
+    let batchDeleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+    let context = ThoughtsManagerCoreData.shared.managedContext
+
+    do {
+      try context.execute(batchDeleteRequest)
+      print("deleted")
+    } catch let error as NSError {
+       print("failed")
+      
     }
   }
   

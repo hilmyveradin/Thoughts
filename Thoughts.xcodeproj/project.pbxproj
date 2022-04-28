@@ -12,6 +12,7 @@
 		01419F732818EEB40095A17A /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01419F722818EEB40095A17A /* UIColorExtension.swift */; };
 		01419F75281A31780095A17A /* ThoughtsManagerCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01419F74281A31780095A17A /* ThoughtsManagerCoreData.swift */; };
 		01419F77281A36790095A17A /* ThoughtsRxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01419F76281A36790095A17A /* ThoughtsRxViewController.swift */; };
+		01419F79281A6CEA0095A17A /* AddThoughtsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01419F78281A6CEA0095A17A /* AddThoughtsViewModel.swift */; };
 		016124652816BDAE006ACB35 /* AddThoughtsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016124642816BDAE006ACB35 /* AddThoughtsViewController.swift */; };
 		019CDB5428177D110066D10B /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 019CDB3B28177CA10066D10B /* WidgetKit.framework */; };
 		019CDB5528177D110066D10B /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 019CDB3D28177CA10066D10B /* SwiftUI.framework */; };
@@ -63,6 +64,7 @@
 		01419F722818EEB40095A17A /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		01419F74281A31780095A17A /* ThoughtsManagerCoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThoughtsManagerCoreData.swift; sourceTree = "<group>"; };
 		01419F76281A36790095A17A /* ThoughtsRxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThoughtsRxViewController.swift; sourceTree = "<group>"; };
+		01419F78281A6CEA0095A17A /* AddThoughtsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddThoughtsViewModel.swift; sourceTree = "<group>"; };
 		016124642816BDAE006ACB35 /* AddThoughtsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddThoughtsViewController.swift; sourceTree = "<group>"; };
 		019CDB3B28177CA10066D10B /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		019CDB3D28177CA10066D10B /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -214,6 +216,7 @@
 			children = (
 				01419F6E2818A93F0095A17A /* ThoughtViewViewModel.swift */,
 				01419F702818E23A0095A17A /* ThoughtListViewModel.swift */,
+				01419F78281A6CEA0095A17A /* AddThoughtsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -422,6 +425,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01419F79281A6CEA0095A17A /* AddThoughtsViewModel.swift in Sources */,
 				01419F77281A36790095A17A /* ThoughtsRxViewController.swift in Sources */,
 				01D0896C28169C7900E9E9FF /* ProgrammaticView.swift in Sources */,
 				019CDB692817DA830066D10B /* DataHelpers.swift in Sources */,

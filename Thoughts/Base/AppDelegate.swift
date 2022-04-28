@@ -23,8 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     proxy.scrollEdgeAppearance = appearance
     return true
     
-//    ThoughtsManagerCoreData.shared.fetchThoughs()
-//    ThoughtsDataManager.shared.fetchThoughsController()
+    
     
   }
   

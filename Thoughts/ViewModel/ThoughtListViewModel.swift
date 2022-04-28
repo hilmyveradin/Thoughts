@@ -11,19 +11,24 @@ import RxCocoa
 
 class ThoughtListViewModel {
   private var texts = BehaviorRelay<[Texts]>(value: [])
-  private var thoughtsManagerCoreData = ThoughtsManagerCoreData()
+//  private var thoughtsManagerCoreData = ThoughtsManagerCoreData()
   private var disposeBag = DisposeBag()
+  
+  static let shared = ThoughtListViewModel()
   
   init() {
     fetchTextsAndUpdateObservableTodos()
+    print("initialized")
   }
   
   func getTexts() -> BehaviorRelay<[Texts]> {
+    print("View model: get texts")
     return texts
   }
   
   func fetchTextsAndUpdateObservableTodos() {
-    thoughtsManagerCoreData.fetchObservableData()
+    print("View Model: fetch texts")
+    ThoughtsManagerCoreData.shared.fetchObservableData()
       .map({ $0 })
       .subscribe(onNext : { (todos) in
         self.texts.accept(todos)
@@ -31,9 +36,6 @@ class ThoughtListViewModel {
       .disposed(by: disposeBag)
   }
   
-  func saveThought(titleText: String, descText: String, date: Date) {
-    thoughtsManagerCoreData.saveThought(titleText: titleText, descText: descText, date: date)
-    
-  }
+  
   
 }
