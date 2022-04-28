@@ -15,10 +15,10 @@ class ThoughtsDataManager {
   
   //MARK: - Basic Function
   lazy var managedContext: NSManagedObjectContext = {
-    return self.persistentContainer.viewContext
+    return ThoughtsDataManager.persistentContainer.viewContext
   }()
   
-  private lazy var persistentContainer: NSPersistentContainer = {
+  private static var persistentContainer: NSPersistentContainer = {
     let container = NSPersistentContainer(name: "ThoughtsData")
     container.loadPersistentStores { _, error in
       if let error = error as NSError? {
@@ -77,7 +77,13 @@ class ThoughtsDataManager {
     saveContext()
   }
   
-  func fetchThoughs() -> NSFetchedResultsController<Texts> {
+  func fetchThoughsController() -> NSFetchedResultsController<Texts> {
+    let request = NSFetchRequest<Texts>(entityName: "Texts")
+    let texts = try! ThoughtsManagerCoreData.shared.managedContext.fetch(request)
+    
+    print(texts.count)
+    
+    
     let fetchRequest: NSFetchRequest<Texts> = Texts.fetchRequest()
     
     let context = ThoughtsDataManager.shared.managedContext

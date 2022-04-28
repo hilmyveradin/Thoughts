@@ -19,7 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     guard let windowScene = (scene as? UIWindowScene) else { return }
     maybeOpenedFromWidget(urlContexts: connectionOptions.urlContexts)
     window = UIWindow(frame: UIScreen.main.bounds)
-    let home = ThoughtListViewController()
+    let home = ThoughtsRxViewController()
     let navigationController = UINavigationController(rootViewController: home)
     self.window?.rootViewController = navigationController
     window?.makeKeyAndVisible()
@@ -55,14 +55,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
   }
   
   func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
-    maybeOpenedFromWidget(urlContexts: URLContexts)
-    guard let windowScene = (scene as? UIWindowScene) else { return }
-    window = UIWindow(frame: UIScreen.main.bounds)
-    let home = AddThoughtsViewController()
-    let navigationController = UINavigationController(rootViewController: home)
-    self.window?.rootViewController = navigationController
-    window?.makeKeyAndVisible()
-    window?.windowScene = windowScene
+//    maybeOpenedFromWidget(urlContexts: URLContexts)
+//    guard let windowScene = (scene as? UIWindowScene) else { return }
+//    window = UIWindow(frame: UIScreen.main.bounds)
+//    let home = AddThoughtsViewController()
+//    let navigationController = UINavigationController(rootViewController: home)
+//    self.window?.rootViewController = navigationController
+//    window?.makeKeyAndVisible()
+//    window?.windowScene = windowScene
   }
   
   private func maybeOpenedFromWidget(urlContexts: Set<UIOpenURLContext>) {

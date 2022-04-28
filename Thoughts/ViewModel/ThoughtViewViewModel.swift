@@ -6,8 +6,6 @@
 //
 
 import Foundation
-import RxSwift
-import RxCocoa
 
 class ThoughtViewViewModel {
   private var texts: Texts

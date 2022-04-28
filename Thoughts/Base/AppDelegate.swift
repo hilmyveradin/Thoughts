@@ -22,6 +22,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     proxy.standardAppearance = appearance
     proxy.scrollEdgeAppearance = appearance
     return true
+    
+//    ThoughtsManagerCoreData.shared.fetchThoughs()
+//    ThoughtsDataManager.shared.fetchThoughsController()
+    
   }
   
   // MARK: UISceneSession Lifecycle
