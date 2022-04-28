@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		012A4D7A281A7AED00AA0E19 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 019CDB3B28177CA10066D10B /* WidgetKit.framework */; };
+		012A4D7B281A7AED00AA0E19 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 019CDB3D28177CA10066D10B /* SwiftUI.framework */; };
+		012A4D7E281A7AED00AA0E19 /* DigitalThoughts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012A4D7D281A7AED00AA0E19 /* DigitalThoughts.swift */; };
+		012A4D80281A7AEE00AA0E19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 012A4D7F281A7AEE00AA0E19 /* Assets.xcassets */; };
+		012A4D84281A7AEE00AA0E19 /* DigitalThoughtsExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 012A4D79281A7AED00AA0E19 /* DigitalThoughtsExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		01419F6F2818A93F0095A17A /* ThoughtViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01419F6E2818A93F0095A17A /* ThoughtViewViewModel.swift */; };
 		01419F712818E23A0095A17A /* ThoughtListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01419F702818E23A0095A17A /* ThoughtListViewModel.swift */; };
 		01419F732818EEB40095A17A /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01419F722818EEB40095A17A /* UIColorExtension.swift */; };
@@ -14,11 +19,6 @@
 		01419F77281A36790095A17A /* ThoughtsRxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01419F76281A36790095A17A /* ThoughtsRxViewController.swift */; };
 		01419F79281A6CEA0095A17A /* AddThoughtsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01419F78281A6CEA0095A17A /* AddThoughtsViewModel.swift */; };
 		016124652816BDAE006ACB35 /* AddThoughtsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016124642816BDAE006ACB35 /* AddThoughtsViewController.swift */; };
-		019CDB5428177D110066D10B /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 019CDB3B28177CA10066D10B /* WidgetKit.framework */; };
-		019CDB5528177D110066D10B /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 019CDB3D28177CA10066D10B /* SwiftUI.framework */; };
-		019CDB5828177D110066D10B /* ThoughtsWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019CDB5728177D110066D10B /* ThoughtsWidget.swift */; };
-		019CDB5A28177D120066D10B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 019CDB5928177D120066D10B /* Assets.xcassets */; };
-		019CDB5E28177D120066D10B /* ThoughtsWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 019CDB5328177D110066D10B /* ThoughtsWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		019CDB642817CEFB0066D10B /* ThoughtsData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 019CDB622817CEFB0066D10B /* ThoughtsData.xcdatamodeld */; };
 		019CDB662817D0EA0066D10B /* ThoughtsDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019CDB652817D0EA0066D10B /* ThoughtsDataManager.swift */; };
 		019CDB692817DA830066D10B /* DataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019CDB682817DA830066D10B /* DataHelpers.swift */; };
@@ -30,17 +30,16 @@
 		01D0893D2816953C00E9E9FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01D0893B2816953C00E9E9FF /* LaunchScreen.storyboard */; };
 		01D0896A28169BC300E9E9FF /* AnchorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D0896928169BC300E9E9FF /* AnchorExtensions.swift */; };
 		01D0896C28169C7900E9E9FF /* ProgrammaticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D0896B28169C7900E9E9FF /* ProgrammaticView.swift */; };
-		85FDD0B033071B04CF27D376 /* Pods_ThoughtsWidgetExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9726E00C69A856DF2961B324 /* Pods_ThoughtsWidgetExtension.framework */; };
 		AA3E3A4A53B294F41F792336 /* Pods_Thoughts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2797F93AE4612DB154FF15F /* Pods_Thoughts.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		019CDB5C28177D120066D10B /* PBXContainerItemProxy */ = {
+		012A4D82281A7AEE00AA0E19 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 01D089252816953B00E9E9FF /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 019CDB5228177D110066D10B;
-			remoteInfo = ThoughtsWidgetExtension;
+			remoteGlobalIDString = 012A4D78281A7AED00AA0E19;
+			remoteInfo = DigitalThoughtsExtension;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -51,7 +50,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				019CDB5E28177D120066D10B /* ThoughtsWidgetExtension.appex in Embed App Extensions */,
+				012A4D84281A7AEE00AA0E19 /* DigitalThoughtsExtension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -59,6 +58,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		012A4D79281A7AED00AA0E19 /* DigitalThoughtsExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = DigitalThoughtsExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		012A4D7D281A7AED00AA0E19 /* DigitalThoughts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigitalThoughts.swift; sourceTree = "<group>"; };
+		012A4D7F281A7AEE00AA0E19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		012A4D81281A7AEE00AA0E19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01419F6E2818A93F0095A17A /* ThoughtViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThoughtViewViewModel.swift; sourceTree = "<group>"; };
 		01419F702818E23A0095A17A /* ThoughtListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThoughtListViewModel.swift; sourceTree = "<group>"; };
 		01419F722818EEB40095A17A /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
@@ -68,10 +71,6 @@
 		016124642816BDAE006ACB35 /* AddThoughtsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddThoughtsViewController.swift; sourceTree = "<group>"; };
 		019CDB3B28177CA10066D10B /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		019CDB3D28177CA10066D10B /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
-		019CDB5328177D110066D10B /* ThoughtsWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ThoughtsWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		019CDB5728177D110066D10B /* ThoughtsWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThoughtsWidget.swift; sourceTree = "<group>"; };
-		019CDB5928177D120066D10B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		019CDB5B28177D120066D10B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		019CDB632817CEFB0066D10B /* ThoughtsData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ThoughtsData.xcdatamodel; sourceTree = "<group>"; };
 		019CDB652817D0EA0066D10B /* ThoughtsDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThoughtsDataManager.swift; sourceTree = "<group>"; };
 		019CDB682817DA830066D10B /* DataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHelpers.swift; sourceTree = "<group>"; };
@@ -94,13 +93,12 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		019CDB5028177D110066D10B /* Frameworks */ = {
+		012A4D76281A7AED00AA0E19 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				019CDB5528177D110066D10B /* SwiftUI.framework in Frameworks */,
-				019CDB5428177D110066D10B /* WidgetKit.framework in Frameworks */,
-				85FDD0B033071B04CF27D376 /* Pods_ThoughtsWidgetExtension.framework in Frameworks */,
+				012A4D7B281A7AED00AA0E19 /* SwiftUI.framework in Frameworks */,
+				012A4D7A281A7AED00AA0E19 /* WidgetKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,6 +113,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		012A4D7C281A7AED00AA0E19 /* DigitalThoughts */ = {
+			isa = PBXGroup;
+			children = (
+				012A4D7D281A7AED00AA0E19 /* DigitalThoughts.swift */,
+				012A4D7F281A7AEE00AA0E19 /* Assets.xcassets */,
+				012A4D81281A7AEE00AA0E19 /* Info.plist */,
+			);
+			path = DigitalThoughts;
+			sourceTree = "<group>";
+		};
 		019CDB3A28177CA10066D10B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -124,16 +132,6 @@
 				9726E00C69A856DF2961B324 /* Pods_ThoughtsWidgetExtension.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		019CDB5628177D110066D10B /* ThoughtsWidget */ = {
-			isa = PBXGroup;
-			children = (
-				019CDB5728177D110066D10B /* ThoughtsWidget.swift */,
-				019CDB5928177D120066D10B /* Assets.xcassets */,
-				019CDB5B28177D120066D10B /* Info.plist */,
-			);
-			path = ThoughtsWidget;
 			sourceTree = "<group>";
 		};
 		019CDB672817DA680066D10B /* Manager */ = {
@@ -149,7 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				01D0892F2816953B00E9E9FF /* Thoughts */,
-				019CDB5628177D110066D10B /* ThoughtsWidget */,
+				012A4D7C281A7AED00AA0E19 /* DigitalThoughts */,
 				019CDB3A28177CA10066D10B /* Frameworks */,
 				01D0892E2816953B00E9E9FF /* Products */,
 				BD27C05962107122DF23E11B /* Pods */,
@@ -160,7 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				01D0892D2816953B00E9E9FF /* Thoughts.app */,
-				019CDB5328177D110066D10B /* ThoughtsWidgetExtension.appex */,
+				012A4D79281A7AED00AA0E19 /* DigitalThoughtsExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -252,22 +250,21 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		019CDB5228177D110066D10B /* ThoughtsWidgetExtension */ = {
+		012A4D78281A7AED00AA0E19 /* DigitalThoughtsExtension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 019CDB5F28177D120066D10B /* Build configuration list for PBXNativeTarget "ThoughtsWidgetExtension" */;
+			buildConfigurationList = 012A4D85281A7AEE00AA0E19 /* Build configuration list for PBXNativeTarget "DigitalThoughtsExtension" */;
 			buildPhases = (
-				86567D5A4251CE90C71A12A6 /* [CP] Check Pods Manifest.lock */,
-				019CDB4F28177D110066D10B /* Sources */,
-				019CDB5028177D110066D10B /* Frameworks */,
-				019CDB5128177D110066D10B /* Resources */,
+				012A4D75281A7AED00AA0E19 /* Sources */,
+				012A4D76281A7AED00AA0E19 /* Frameworks */,
+				012A4D77281A7AED00AA0E19 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = ThoughtsWidgetExtension;
-			productName = ThoughtsWidgetExtension;
-			productReference = 019CDB5328177D110066D10B /* ThoughtsWidgetExtension.appex */;
+			name = DigitalThoughtsExtension;
+			productName = DigitalThoughtsExtension;
+			productReference = 012A4D79281A7AED00AA0E19 /* DigitalThoughtsExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 		01D0892C2816953B00E9E9FF /* Thoughts */ = {
@@ -284,7 +281,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				019CDB5D28177D120066D10B /* PBXTargetDependency */,
+				012A4D83281A7AEE00AA0E19 /* PBXTargetDependency */,
 			);
 			name = Thoughts;
 			productName = Thoughts;
@@ -301,7 +298,7 @@
 				LastSwiftUpdateCheck = 1330;
 				LastUpgradeCheck = 1330;
 				TargetAttributes = {
-					019CDB5228177D110066D10B = {
+					012A4D78281A7AED00AA0E19 = {
 						CreatedOnToolsVersion = 13.3;
 					};
 					01D0892C2816953B00E9E9FF = {
@@ -323,17 +320,17 @@
 			projectRoot = "";
 			targets = (
 				01D0892C2816953B00E9E9FF /* Thoughts */,
-				019CDB5228177D110066D10B /* ThoughtsWidgetExtension */,
+				012A4D78281A7AED00AA0E19 /* DigitalThoughtsExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		019CDB5128177D110066D10B /* Resources */ = {
+		012A4D77281A7AED00AA0E19 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				019CDB5A28177D120066D10B /* Assets.xcassets in Resources */,
+				012A4D80281A7AEE00AA0E19 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,36 +385,14 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Thoughts/Pods-Thoughts-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		86567D5A4251CE90C71A12A6 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ThoughtsWidgetExtension-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		019CDB4F28177D110066D10B /* Sources */ = {
+		012A4D75281A7AED00AA0E19 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				019CDB5828177D110066D10B /* ThoughtsWidget.swift in Sources */,
+				012A4D7E281A7AED00AA0E19 /* DigitalThoughts.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,10 +422,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		019CDB5D28177D120066D10B /* PBXTargetDependency */ = {
+		012A4D83281A7AEE00AA0E19 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 019CDB5228177D110066D10B /* ThoughtsWidgetExtension */;
-			targetProxy = 019CDB5C28177D120066D10B /* PBXContainerItemProxy */;
+			target = 012A4D78281A7AED00AA0E19 /* DigitalThoughtsExtension */;
+			targetProxy = 012A4D82281A7AEE00AA0E19 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -466,9 +441,8 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		019CDB6028177D120066D10B /* Debug */ = {
+		012A4D86281A7AEE00AA0E19 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 943F46AA5F4DB648B31B6A42 /* Pods-ThoughtsWidgetExtension.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
@@ -476,8 +450,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = R5743U27B6;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ThoughtsWidget/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = ThoughtsAppWidget;
+				INFOPLIST_FILE = DigitalThoughts/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = DigitalThoughts;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -485,18 +459,17 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.hilmyveradin.ThoughtsApp.ThoughtsWidget;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hilmyveradin.ThoughtsApp.DigitalThoughts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		019CDB6128177D120066D10B /* Release */ = {
+		012A4D87281A7AEE00AA0E19 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 48C6BF922A5C949F54D68AD9 /* Pods-ThoughtsWidgetExtension.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
@@ -504,8 +477,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = R5743U27B6;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ThoughtsWidget/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = ThoughtsAppWidget;
+				INFOPLIST_FILE = DigitalThoughts/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = DigitalThoughts;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -513,12 +486,12 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.hilmyveradin.ThoughtsApp.ThoughtsWidget;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hilmyveradin.ThoughtsApp.DigitalThoughts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -703,11 +676,11 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		019CDB5F28177D120066D10B /* Build configuration list for PBXNativeTarget "ThoughtsWidgetExtension" */ = {
+		012A4D85281A7AEE00AA0E19 /* Build configuration list for PBXNativeTarget "DigitalThoughtsExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				019CDB6028177D120066D10B /* Debug */,
-				019CDB6128177D120066D10B /* Release */,
+				012A4D86281A7AEE00AA0E19 /* Debug */,
+				012A4D87281A7AEE00AA0E19 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

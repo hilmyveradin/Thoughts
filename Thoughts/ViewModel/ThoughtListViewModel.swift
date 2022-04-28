@@ -36,6 +36,10 @@ class ThoughtListViewModel {
       .disposed(by: disposeBag)
   }
   
+  public func removeTodo(withIndex index: Int) {
+    ThoughtsManagerCoreData.shared.removeTexts(withIndex: index)
+  }
+  
   
   
 }

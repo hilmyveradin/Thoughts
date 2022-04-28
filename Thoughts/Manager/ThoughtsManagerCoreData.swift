@@ -56,7 +56,7 @@ class ThoughtsManagerCoreData {
     let texts = try! ThoughtsManagerCoreData.shared.managedContext.fetch(request)
     
     if texts.count > 0 {
-//      print("Manager: Fetch Goals, of Goals: \(texts.count)")
+      //      print("Manager: Fetch Goals, of Goals: \(texts.count)")
       return texts
     } else {
       print("texts.count = 0")
@@ -77,7 +77,7 @@ class ThoughtsManagerCoreData {
       textsFromCoreData.accept(fetchThoughs())
       print("thought saved!")
     } catch {
-        fatalError("error saving data")
+      fatalError("error saving data")
     }
   }
   
@@ -85,24 +85,35 @@ class ThoughtsManagerCoreData {
     let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Texts")
     let batchDeleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
     let context = ThoughtsManagerCoreData.shared.managedContext
-
+    
     do {
       try context.execute(batchDeleteRequest)
       print("deleted")
     } catch let error as NSError {
-       print("failed")
+      print("failed")
       
     }
   }
   
-//  func saveThoughts(titleText: String, descText: String, date: Date) {
-//    let context = ThoughtsManagerCoreData.shared.managedContext
-//    let text = Texts(context: context)
-//
-//    text.textTitle = titleText
-//    text.textDescription = descText
-//    text.dateInput = date
-//
-//    saveContext()
-//  }
+  func removeTexts(withIndex index: Int) {
+    managedContext.delete(textsFromCoreData.value[index])
+    
+    do {
+      try managedContext.save()
+      textsFromCoreData.accept(fetchThoughs())
+    } catch {
+      fatalError("error delete data")
+    }
+  }
+  
+  //  func saveThoughts(titleText: String, descText: String, date: Date) {
+  //    let context = ThoughtsManagerCoreData.shared.managedContext
+  //    let text = Texts(context: context)
+  //
+  //    text.textTitle = titleText
+  //    text.textDescription = descText
+  //    text.dateInput = date
+  //
+  //    saveContext()
+  //  }
 }

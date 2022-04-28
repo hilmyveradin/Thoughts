@@ -106,8 +106,6 @@ class AddThoughtsViewController: UIViewController, ProgrammaticView {
                             centerX: nil, centerY: nil,
                             enableInsets: false)
   }
-  
-  
 }
 
 //MARK: - Data Helpers
@@ -143,11 +141,11 @@ extension AddThoughtsViewController {
   
   @objc func backToMain() {
     dismiss(animated: true)
-//    let vc = ThoughtListViewController()
-//    let navigationController = UINavigationController(rootViewController: vc)
-//    navigationController.modalPresentationStyle = .fullScreen
-//    show(vc, sender: self)
-//    print("dismissed failed")
+    let vc = ThoughtListViewController()
+    let navigationController = UINavigationController(rootViewController: vc)
+    navigationController.modalPresentationStyle = .fullScreen
+    show(vc, sender: self)
+    print("dismissed failed")
   }
   
   @objc func addThougts() {

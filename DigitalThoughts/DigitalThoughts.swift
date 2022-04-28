@@ -1,8 +1,8 @@
 //
-//  ThoughtsWidget.swift
-//  ThoughtsWidget
+//  DigitalThoughts.swift
+//  DigitalThoughts
 //
-//  Created by Hilmy Veradin on 26/04/22.
+//  Created by Hilmy Veradin on 28/04/22.
 //
 
 import WidgetKit
@@ -38,9 +38,9 @@ struct SimpleEntry: TimelineEntry {
   let date: Date
 }
 
-struct ThoughtsWidgetEntryView : View {
+struct DigitalThoughtsEntryView : View {
   var entry: Provider.Entry
-  private static let deeplinkURL: URL = URL(string: "widget-deeplink://")!
+  private static let deeplinkURL: URL = URL(string: "thoughts-deeplink://")!
   
   var body: some View {
     ZStack{
@@ -48,7 +48,7 @@ struct ThoughtsWidgetEntryView : View {
       VStack(spacing:15) {
         Text("Add Thoughts")
           .font(Font.custom("Montserrat-Bold", size: 18))
-
+        
         Image(systemName: "plus")
           .resizable()
           .frame(width: 30, height: 30, alignment: .center)
@@ -64,26 +64,26 @@ struct ThoughtsWidgetEntryView : View {
           )
       }
     }
-    .widgetURL(ThoughtsWidgetEntryView.deeplinkURL)
+    .widgetURL(DigitalThoughtsEntryView.deeplinkURL)
   }
 }
 
 @main
-struct ThoughtsWidget: Widget {
-  let kind: String = "ThoughtsWidget"
+struct DigitalThoughts: Widget {
+  let kind: String = "ABC"
   
   var body: some WidgetConfiguration {
     StaticConfiguration(kind: kind, provider: Provider()) { entry in
-      ThoughtsWidgetEntryView(entry: entry)
+      DigitalThoughtsEntryView(entry: entry)
     }
-    .configurationDisplayName("Thoughts")
-    .description("Add your thoughts immediately")
+    .configurationDisplayName("oooo")
+    .description("This is an example widget.")
   }
 }
 
-struct ThoughtsWidget_Previews: PreviewProvider {
+struct DigitalThoughts_Previews: PreviewProvider {
   static var previews: some View {
-    ThoughtsWidgetEntryView(entry: SimpleEntry(date: Date()))
+    DigitalThoughtsEntryView(entry: SimpleEntry(date: Date()))
       .previewContext(WidgetPreviewContext(family: .systemSmall))
   }
 }

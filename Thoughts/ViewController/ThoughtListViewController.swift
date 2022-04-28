@@ -33,27 +33,15 @@ class ThoughtListViewController: UIViewController, ProgrammaticView {
   
   //MARK: - Life Cycles
   override func viewDidLoad() {
-    
     super.viewDidLoad()
     view.backgroundColor = .systemGray5
     self.title = "Thoughts"
+    self.navigationItem.hidesBackButton = true
     setupView()
     observableTextsTableView()
-    
+    setupTodoListTableViewCellWhenDeleted()
   }
   
-  override func viewWillAppear(_ animated: Bool) {
-    super.viewWillAppear(animated)
-    presentingViewController?.viewWillDisappear(true)
-    self.navigationItem.hidesBackButton = true
-
-    
-  }
-  
-  override func viewDidAppear(_ animated: Bool) {
-    super.viewDidAppear(animated)
-    
-  }
   //MARK: - Helpers
   func setupView() {
     
@@ -109,6 +97,14 @@ extension ThoughtListViewController {
     }.disposed(by: disposeBag)
     
   }
+  
+  private func setupTodoListTableViewCellWhenDeleted() {
+    tableView.rx.itemDeleted
+      .subscribe(onNext : { indexPath in
+        self.thoughtListViewModel.removeTodo(withIndex: indexPath.row)
+      })
+      .disposed(by: disposeBag)
+  }
 }
 
 
@@ -117,11 +113,11 @@ import SwiftUI
 #if DEBUG
 struct ListViewControllerContainerView: UIViewControllerRepresentable {
   typealias UIViewControllerType = ThoughtListViewController
-
+  
   func makeUIViewController(context: Context) -> UIViewControllerType {
     return ThoughtListViewController()
   }
-
+  
   func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {}
 }
 
