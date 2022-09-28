@@ -6,6 +6,20 @@
 	objectVersion = 55;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		01938B1C28E4333B0097A841 /* Swiftlint */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 01938B1F28E4333B0097A841 /* Build configuration list for PBXAggregateTarget "Swiftlint" */;
+			buildPhases = (
+				01938B2028E433480097A841 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = Swiftlint;
+			productName = Swiftlint;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		012A4D7A281A7AED00AA0E19 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 019CDB3B28177CA10066D10B /* WidgetKit.framework */; };
 		012A4D7B281A7AED00AA0E19 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 019CDB3D28177CA10066D10B /* SwiftUI.framework */; };
@@ -286,6 +300,9 @@
 					012A4D78281A7AED00AA0E19 = {
 						CreatedOnToolsVersion = 13.3;
 					};
+					01938B1C28E4333B0097A841 = {
+						CreatedOnToolsVersion = 13.3;
+					};
 					01D0892C2816953B00E9E9FF = {
 						CreatedOnToolsVersion = 13.3;
 					};
@@ -306,6 +323,7 @@
 			targets = (
 				01D0892C2816953B00E9E9FF /* Thoughts */,
 				012A4D78281A7AED00AA0E19 /* DigitalThoughtsExtension */,
+				01938B1C28E4333B0097A841 /* Swiftlint */,
 			);
 		};
 /* End PBXProject section */
@@ -331,6 +349,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		01938B2028E433480097A841 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if test -d \"/opt/homebrew/bin/\"; then\n  PATH=\"/opt/homebrew/bin/:${PATH}\"\nfi\n\nexport PATH\n\nif which swiftlint >/dev/null; then\n  swiftlint autocorrect\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
 		0C031C94DD13DEE3971F2D92 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -472,6 +507,24 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		01938B1D28E4333B0097A841 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R5743U27B6;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		01938B1E28E4333B0097A841 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R5743U27B6;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
@@ -661,6 +714,15 @@
 			buildConfigurations = (
 				012A4D86281A7AEE00AA0E19 /* Debug */,
 				012A4D87281A7AEE00AA0E19 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		01938B1F28E4333B0097A841 /* Build configuration list for PBXAggregateTarget "Swiftlint" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01938B1D28E4333B0097A841 /* Debug */,
+				01938B1E28E4333B0097A841 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

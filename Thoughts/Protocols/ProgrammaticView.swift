@@ -7,5 +7,5 @@
 import Foundation
 
 protocol ProgrammaticView {
-  func setupView()
+    func setupView()
 }

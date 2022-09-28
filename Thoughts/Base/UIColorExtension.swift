@@ -9,5 +9,5 @@ import Foundation
 import UIKit
 
 extension UIColor {
-  static let darkOrange = UIColor(red: 0.78, green: 0.39, blue: 0.00, alpha: 1.00)
+    static let darkOrange = UIColor(red: 0.78, green: 0.39, blue: 0.00, alpha: 1.00)
 }
