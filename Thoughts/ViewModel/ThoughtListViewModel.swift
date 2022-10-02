@@ -11,12 +11,9 @@ import RxCocoa
 
 //TODO: Analyze this VM Functionality
 class ThoughtListViewModel {
-    // kenapa pake behaviorRelay?
-    private var texts = BehaviorRelay<[Texts]>(value: [])
-    //  private var thoughtsManagerCoreData = ThoughtsManagerCoreData()
-    private var disposeBag = DisposeBag()
     
-    static let shared = ThoughtListViewModel()
+    private var texts = BehaviorRelay<[Texts]>(value: [])
+    private var disposeBag = DisposeBag()
     
     init() {
         fetchTextsAndUpdateObservableTodos()
@@ -28,19 +25,19 @@ class ThoughtListViewModel {
         return texts
     }
     
-    func fetchTextsAndUpdateObservableTodos() {
+    func removeTodo(withIndex index: Int) {
+        ThoughtsManagerCoreData.shared.removeTexts(withIndex: index)
+    }
+    
+    //MARK: - Private
+    private func fetchTextsAndUpdateObservableTodos() {
         print("View Model: fetch texts")
+        // Model Interaction
         ThoughtsManagerCoreData.shared.fetchObservableData()
             .map({ $0 })
-        // Kenapa pake map?
             .subscribe(onNext: { (todos) in
                 self.texts.accept(todos)
             })
             .disposed(by: disposeBag)
     }
-    
-    public func removeTodo(withIndex index: Int) {
-        ThoughtsManagerCoreData.shared.removeTexts(withIndex: index)
-    }
-    
 }

@@ -10,7 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-final class AddThoughtsViewController: UIViewController, ProgrammaticView {
+final class AddThoughtsViewController: UIViewController {
     
     // MARK: - PROPERTIES
     // MARK: UI COMPONENTS
@@ -67,7 +67,7 @@ final class AddThoughtsViewController: UIViewController, ProgrammaticView {
     
     // MARK: - HELPERS
     
-    internal func setupView() {
+    private func setupView() {
         
         navigationItem.leftBarButtonItem = cancelButton
         navigationItem.rightBarButtonItem = doneButton
@@ -112,6 +112,7 @@ final class AddThoughtsViewController: UIViewController, ProgrammaticView {
 
 // MARK: - Data Helpers
 extension AddThoughtsViewController {
+    //TODO: Can we move this function to ViewModel?
     private func saveData() {
         let titleText = titleTextField.text ?? ""
         let descText = thoughtsTextView.text ?? ""
@@ -125,10 +126,10 @@ extension AddThoughtsViewController {
     private func rxDoneAction() {
         doneButton.rx.tap
             .subscribe(onNext: {
-            print("done pressed")
-            self.addThougts()
-        })
-        .disposed(by: disposeBag)
+                print("done pressed")
+                self.addThougts()
+            })
+            .disposed(by: disposeBag)
     }
     
     private func rxCancelAction() {

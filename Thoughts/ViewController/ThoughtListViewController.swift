@@ -10,7 +10,7 @@ import CoreData
 import RxSwift
 import RxCocoa
 
-class ThoughtListViewController: UIViewController, ProgrammaticView {
+class ThoughtListViewController: UIViewController {
     
     // MARK: - PROPERTIES
     // MARK: UI COMPONENT
@@ -28,8 +28,8 @@ class ThoughtListViewController: UIViewController, ProgrammaticView {
     }()
     
     //MARK: OBJECT
-    var thoughtListViewModel = ThoughtListViewModel()
-    var disposeBag = DisposeBag()
+    private let thoughtListViewModel = ThoughtListViewModel()
+    private let disposeBag = DisposeBag()
     
     // MARK: - LIFE CYCLES
     override func viewDidLoad() {
@@ -42,7 +42,7 @@ class ThoughtListViewController: UIViewController, ProgrammaticView {
     }
     
     // MARK: - Helpers
-    func setupView() {
+    private func setupView() {
         
         view.backgroundColor = .systemGray5
         
@@ -59,7 +59,7 @@ class ThoughtListViewController: UIViewController, ProgrammaticView {
         
         view.addSubview(addButton)
         view.bringSubviewToFront(addButton)
-
+        
         addButton.anchor(bottom: view.safeAreaLayoutGuide.bottomAnchor, paddingBottom: 20,
                          right: view.safeAreaLayoutGuide.rightAnchor, paddingRight: 20,
                          width: buttonSize, height: buttonSize)
@@ -86,9 +86,7 @@ class ThoughtListViewController: UIViewController, ProgrammaticView {
 // MARK: - TableView Configuration
 extension ThoughtListViewController {
     private func observableTextsTableView() {
-        let observableTexts = ThoughtListViewModel.shared.getTexts().asObservable()
-        // TODO: Discuss, Base hypothesis, the observableTexts is binding the VM so if there's a change in tableview the VM will be notified. is it true?
-        // TODO: Question, What is binding in RxSwift?
+        let observableTexts = thoughtListViewModel.getTexts().asObservable()
         observableTexts.bind(to: tableView.rx.items(cellIdentifier: "DefaultCell",
                                                     cellType: ThoughtsCell.self)) { (_, element, cell) in
             cell.thoughtsTitle.text = element.textTitle

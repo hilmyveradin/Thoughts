@@ -40,30 +40,16 @@ class ThoughtsManagerCoreData {
     }
     
     // MARK: - CoreData
-    // kenapa pake behavior relay?
     private var textsFromCoreData = BehaviorRelay<[Texts]>(value: [])
     
     // MARK: - return observable todo
-    public func fetchObservableData() -> Observable<[Texts]> {
+    func fetchObservableData() -> Observable<[Texts]> {
         print("Manager: fetch observable data called")
         textsFromCoreData.accept(fetchThoughs())
         return textsFromCoreData.asObservable()
     }
     
     // MARK: - Texts Functions
-    func fetchThoughs() -> [Texts] {
-        print("Manager: fetch thoughts called")
-        let request = NSFetchRequest<Texts>(entityName: "Texts")
-        let texts = try! ThoughtsManagerCoreData.shared.managedContext.fetch(request)
-        
-        if texts.count > 0 {
-            return texts
-        } else {
-            print("texts.count = 0")
-            return []
-        }
-    }
-    
     func saveThought(titleText: String, descText: String, date: Date) {
         let context = ThoughtsManagerCoreData.shared.managedContext
         let text = Texts(context: context)
@@ -74,7 +60,6 @@ class ThoughtsManagerCoreData {
         
         do {
             try managedContext.save()
-            // TODO: Discuss, Why we need to accept this?
             textsFromCoreData.accept(fetchThoughs())
             print("thought saved!")
         } catch {
@@ -100,10 +85,22 @@ class ThoughtsManagerCoreData {
         
         do {
             try managedContext.save()
-            // TODO: Discuss, Why accepting fetchThoughts() ?
             textsFromCoreData.accept(fetchThoughs())
         } catch {
             fatalError("error delete data")
+        }
+    }
+    
+    func fetchThoughs() -> [Texts] {
+        print("Manager: fetch thoughts called")
+        let request = NSFetchRequest<Texts>(entityName: "Texts")
+        let texts = try! ThoughtsManagerCoreData.shared.managedContext.fetch(request)
+        
+        if texts.count > 0 {
+            return texts
+        } else {
+            print("texts.count = 0")
+            return []
         }
     }
 }

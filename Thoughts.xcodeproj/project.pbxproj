@@ -26,6 +26,7 @@
 		012A4D7E281A7AED00AA0E19 /* DigitalThoughts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012A4D7D281A7AED00AA0E19 /* DigitalThoughts.swift */; };
 		012A4D80281A7AEE00AA0E19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 012A4D7F281A7AEE00AA0E19 /* Assets.xcassets */; };
 		012A4D84281A7AEE00AA0E19 /* DigitalThoughtsExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 012A4D79281A7AED00AA0E19 /* DigitalThoughtsExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		012EF49128E9E4AC00B8A092 /* AddThoughtsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012EF49028E9E4AC00B8A092 /* AddThoughtsViewModel.swift */; };
 		01419F712818E23A0095A17A /* ThoughtListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01419F702818E23A0095A17A /* ThoughtListViewModel.swift */; };
 		01419F732818EEB40095A17A /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01419F722818EEB40095A17A /* UIColorExtension.swift */; };
 		01419F75281A31780095A17A /* ThoughtsManagerCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01419F74281A31780095A17A /* ThoughtsManagerCoreData.swift */; };
@@ -71,6 +72,7 @@
 		012A4D7D281A7AED00AA0E19 /* DigitalThoughts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigitalThoughts.swift; sourceTree = "<group>"; };
 		012A4D7F281A7AEE00AA0E19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		012A4D81281A7AEE00AA0E19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		012EF49028E9E4AC00B8A092 /* AddThoughtsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddThoughtsViewModel.swift; sourceTree = "<group>"; };
 		01419F702818E23A0095A17A /* ThoughtListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThoughtListViewModel.swift; sourceTree = "<group>"; };
 		01419F722818EEB40095A17A /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		01419F74281A31780095A17A /* ThoughtsManagerCoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThoughtsManagerCoreData.swift; sourceTree = "<group>"; };
@@ -215,6 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				01419F702818E23A0095A17A /* ThoughtListViewModel.swift */,
+				012EF49028E9E4AC00B8A092 /* AddThoughtsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -424,6 +427,7 @@
 				01D0896A28169BC300E9E9FF /* AnchorExtensions.swift in Sources */,
 				019CDB642817CEFB0066D10B /* ThoughtsData.xcdatamodeld in Sources */,
 				01D089352816953B00E9E9FF /* ThoughtListViewController.swift in Sources */,
+				012EF49128E9E4AC00B8A092 /* AddThoughtsViewModel.swift in Sources */,
 				01419F75281A31780095A17A /* ThoughtsManagerCoreData.swift in Sources */,
 				01419F732818EEB40095A17A /* UIColorExtension.swift in Sources */,
 				01D089312816953B00E9E9FF /* AppDelegate.swift in Sources */,
