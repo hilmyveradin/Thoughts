@@ -9,7 +9,9 @@ import Foundation
 import RxSwift
 import RxCocoa
 
+//TODO: Analyze this VM Functionality
 class ThoughtListViewModel {
+    // kenapa pake behaviorRelay?
     private var texts = BehaviorRelay<[Texts]>(value: [])
     //  private var thoughtsManagerCoreData = ThoughtsManagerCoreData()
     private var disposeBag = DisposeBag()
@@ -30,6 +32,7 @@ class ThoughtListViewModel {
         print("View Model: fetch texts")
         ThoughtsManagerCoreData.shared.fetchObservableData()
             .map({ $0 })
+        // Kenapa pake map?
             .subscribe(onNext: { (todos) in
                 self.texts.accept(todos)
             })

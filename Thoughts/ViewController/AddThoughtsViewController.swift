@@ -10,9 +10,10 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class AddThoughtsViewController: UIViewController, ProgrammaticView {
-    // MARK: - Properties
+final class AddThoughtsViewController: UIViewController, ProgrammaticView {
     
+    // MARK: - PROPERTIES
+    // MARK: UI COMPONENTS
     private lazy var titleLabel: UILabel = {
         let lbl = UILabel()
         lbl.text = "Title"
@@ -45,12 +46,13 @@ class AddThoughtsViewController: UIViewController, ProgrammaticView {
         return txtView
     }()
     
-    let cancelButton = UIBarButtonItem(barButtonSystemItem: .cancel, target: nil, action: nil)
-    let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: nil)
+    private let cancelButton = UIBarButtonItem(barButtonSystemItem: .cancel, target: nil, action: nil)
+    private let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: nil)
     
-    let disposeBag = DisposeBag()
+    // MARK: OBJECT
+    private let disposeBag = DisposeBag()
     
-    // MARK: - Life Cyclescxxc
+    // MARK: - LIFE CYCLES
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemGray5
@@ -63,9 +65,9 @@ class AddThoughtsViewController: UIViewController, ProgrammaticView {
         super.viewWillDisappear(animated)
     }
     
-    // MARK: - Helpers
+    // MARK: - HELPERS
     
-    func setupView() {
+    internal func setupView() {
         
         navigationItem.leftBarButtonItem = cancelButton
         navigationItem.rightBarButtonItem = doneButton
@@ -110,7 +112,7 @@ class AddThoughtsViewController: UIViewController, ProgrammaticView {
 
 // MARK: - Data Helpers
 extension AddThoughtsViewController {
-    func saveData() {
+    private func saveData() {
         let titleText = titleTextField.text ?? ""
         let descText = thoughtsTextView.text ?? ""
         let date = Date()
@@ -120,15 +122,16 @@ extension AddThoughtsViewController {
 
 // MARK: - RxExtension
 extension AddThoughtsViewController {
-    func rxDoneAction() {
-        doneButton.rx.tap.subscribe(onNext: {
+    private func rxDoneAction() {
+        doneButton.rx.tap
+            .subscribe(onNext: {
             print("done pressed")
             self.addThougts()
         })
-        .disposed(by: disposeBag )
+        .disposed(by: disposeBag)
     }
     
-    func rxCancelAction() {
+    private func rxCancelAction() {
         cancelButton.rx.tap
             .subscribe(onNext: {
                 print("cancel pressed")
@@ -137,7 +140,7 @@ extension AddThoughtsViewController {
             .disposed(by: disposeBag)
     }
     
-    @objc func backToMain() {
+    @objc private func backToMain() {
         dismiss(animated: true)
         let vc = ThoughtListViewController()
         let navigationController = UINavigationController(rootViewController: vc)
@@ -146,7 +149,7 @@ extension AddThoughtsViewController {
         print("dismissed failed")
     }
     
-    @objc func addThougts() {
+    @objc private func addThougts() {
         if thoughtsTextView.text == "" && titleTextField.text == "" {
             let alertController = UIAlertController(title: "Empty Thoughts",
                                                     message: "Please add your title or thoughts texts",

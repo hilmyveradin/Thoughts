@@ -15,11 +15,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        guard let windowScene = (scene as? UIWindowScene) else { return }
         maybeOpenedFromWidget(urlContexts: connectionOptions.urlContexts)
-        window = UIWindow(frame: UIScreen.main.bounds)
+        
         let home = ThoughtListViewController()
         let navigationController = UINavigationController(rootViewController: home)
+        
+        guard let windowScene = (scene as? UIWindowScene) else { return }
+        window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
         window?.windowScene = windowScene
@@ -54,20 +56,20 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
     
     func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
-        print("executed")
+        
         maybeOpenedFromWidget(urlContexts: URLContexts)
-        guard let windowScene = (scene as? UIWindowScene) else { return }
-        window = UIWindow(frame: UIScreen.main.bounds)
+        
         let home = AddThoughtsViewController()
         let navigationController = UINavigationController(rootViewController: home)
+        
+        guard let windowScene = (scene as? UIWindowScene) else { return }
+        window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
         window?.windowScene = windowScene
     }
     
     private func maybeOpenedFromWidget(urlContexts: Set<UIOpenURLContext>) {
-        guard let _: UIOpenURLContext = urlContexts.first(where: { $0.url.scheme == "widget-deeplink" }) else { return }
-        print("🚀 Launched from widget")
+        if urlContexts.first(where: { $0.url.scheme == "widget-deeplink" }) != nil {}
     }
-    
 }

@@ -13,17 +13,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         let appearance = UINavigationBarAppearance()
         appearance.configureWithOpaqueBackground()
-        appearance.titleTextAttributes = [.foregroundColor: UIColor.black]
+        appearance.titleTextAttributes = [.foregroundColor: UIColor.systemGray2]
         appearance.backgroundColor = .systemGray6
-        let proxy = UINavigationBar.appearance()
-        proxy.tintColor = .orange
-        proxy.standardAppearance = appearance
-        proxy.scrollEdgeAppearance = appearance
+        
+        let navBarAppearance = UINavigationBar.appearance()
+        navBarAppearance.tintColor = .orange
+        navBarAppearance.standardAppearance = appearance
+        navBarAppearance.scrollEdgeAppearance = appearance
+        
         return true
         
     }
     
-    // MARK: UISceneSession Lifecycle
+    // MARK:  - SCENE SESSION LIFECYCLE
     
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
         // Called when a new scene session is being created.

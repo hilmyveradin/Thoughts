@@ -40,6 +40,7 @@ class ThoughtsManagerCoreData {
     }
     
     // MARK: - CoreData
+    // kenapa pake behavior relay?
     private var textsFromCoreData = BehaviorRelay<[Texts]>(value: [])
     
     // MARK: - return observable todo
@@ -53,9 +54,7 @@ class ThoughtsManagerCoreData {
     func fetchThoughs() -> [Texts] {
         print("Manager: fetch thoughts called")
         let request = NSFetchRequest<Texts>(entityName: "Texts")
-        guard let texts = try? ThoughtsManagerCoreData.shared.managedContext.fetch(request) else {
-            return
-        }
+        let texts = try! ThoughtsManagerCoreData.shared.managedContext.fetch(request)
         
         if texts.count > 0 {
             return texts
@@ -75,6 +74,7 @@ class ThoughtsManagerCoreData {
         
         do {
             try managedContext.save()
+            // TODO: Discuss, Why we need to accept this?
             textsFromCoreData.accept(fetchThoughs())
             print("thought saved!")
         } catch {
@@ -100,6 +100,7 @@ class ThoughtsManagerCoreData {
         
         do {
             try managedContext.save()
+            // TODO: Discuss, Why accepting fetchThoughts() ?
             textsFromCoreData.accept(fetchThoughs())
         } catch {
             fatalError("error delete data")
