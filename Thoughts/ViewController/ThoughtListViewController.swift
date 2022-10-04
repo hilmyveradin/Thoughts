@@ -28,10 +28,24 @@ class ThoughtListViewController: UIViewController {
     }()
     
     //MARK: OBJECT
-    private let thoughtListViewModel = ThoughtListViewModel()
+    private let thoughtListViewModel: ThoughtListViewModel
     private let disposeBag = DisposeBag()
     
     // MARK: - LIFE CYCLES
+    
+    init(viewModel: ThoughtListViewModel = ThoughtListViewModel()) {
+        thoughtListViewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+//    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+//        super.init(nibName: nil, bundle: nil)
+//    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Thoughts"
@@ -97,7 +111,6 @@ extension ThoughtListViewController {
     }
     
     private func setupTodoListTableViewCellWhenDeleted() {
-        // TODO: Discuss, how is tableView notified with subscriber?
         tableView.rx.itemDeleted
             .subscribe(onNext: { indexPath in
                 self.thoughtListViewModel.removeTodo(withIndex: indexPath.row)

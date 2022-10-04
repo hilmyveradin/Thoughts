@@ -12,6 +12,7 @@ import RxCocoa
 
 class ThoughtsManagerCoreData {
     
+    // nanti dibikin conforming to protocol, yang jadi dependency di VM bukan class-nya, tapi protocolnya
     static let shared = ThoughtsManagerCoreData()
     
     // MARK: - Basic Function

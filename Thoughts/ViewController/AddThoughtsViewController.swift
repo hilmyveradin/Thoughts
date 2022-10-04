@@ -51,6 +51,17 @@ final class AddThoughtsViewController: UIViewController {
     
     // MARK: OBJECT
     private let disposeBag = DisposeBag()
+    private let addThoughtsViewModel: AddThoughtListViewModel
+    
+    // MARK: INITIALIZATION
+    init(viewModel: AddThoughtListViewModel = AddThoughtListViewModel()) {
+        self.addThoughtsViewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     // MARK: - LIFE CYCLES
     override func viewDidLoad() {
@@ -59,6 +70,8 @@ final class AddThoughtsViewController: UIViewController {
         setupView()
         rxDoneAction()
         rxCancelAction()
+//        let titleText = titleTextField.rx.text.orEmpty.asDriver()
+//        let thoughtsText = thoughtsTextView.rx.text.orEmpty.asDriver()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -110,66 +123,54 @@ final class AddThoughtsViewController: UIViewController {
     }
 }
 
-// MARK: - Data Helpers
-extension AddThoughtsViewController {
-    //TODO: Can we move this function to ViewModel?
-    private func saveData() {
-        let titleText = titleTextField.text ?? ""
-        let descText = thoughtsTextView.text ?? ""
-        let date = Date()
-        ThoughtsManagerCoreData.shared.saveThought(titleText: titleText, descText: descText, date: date)
-    }
-}
-
 // MARK: - RxExtension
 extension AddThoughtsViewController {
+    
     private func rxDoneAction() {
         doneButton.rx.tap
-            .subscribe(onNext: {
-                print("done pressed")
-                self.addThougts()
+            .subscribe(onNext: { [weak self] in
+                guard let self = self else { return }
+                let titleText = self.titleTextField.text ?? ""
+                let descritptionText = self.thoughtsTextView.text ?? ""
+                if !self.addThoughtsViewModel.checkIsTextValid(titleText, descritptionText) {
+                    self.presentEmptyAlert()
+                } else {
+                    self.backToMain()
+                }
             })
             .disposed(by: disposeBag)
     }
     
     private func rxCancelAction() {
         cancelButton.rx.tap
-            .subscribe(onNext: {
+            .subscribe(onNext: { [weak self] in
                 print("cancel pressed")
+                guard let self = self else { return }
                 self.backToMain()
             })
             .disposed(by: disposeBag)
     }
     
-    @objc private func backToMain() {
+    private func backToMain() {
         dismiss(animated: true)
         let vc = ThoughtListViewController()
         let navigationController = UINavigationController(rootViewController: vc)
         navigationController.modalPresentationStyle = .fullScreen
         show(vc, sender: self)
-        print("dismissed failed")
     }
     
-    @objc private func addThougts() {
-        if thoughtsTextView.text == "" && titleTextField.text == "" {
-            let alertController = UIAlertController(title: "Empty Thoughts",
-                                                    message: "Please add your title or thoughts texts",
-                                                    preferredStyle: .alert)
-            alertController.view.tintColor = .orange
-            
-            let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-            alertController.addAction(defaultAction)
-            
-            present(alertController, animated: true, completion: nil)
-        } else {
-            saveData()
-            dismiss(animated: true)
-            let vc = ThoughtListViewController()
-            let navigationController = UINavigationController(rootViewController: vc)
-            navigationController.modalPresentationStyle = .fullScreen
-            show(vc, sender: self)
-        }
+    private func presentEmptyAlert() {
+        let alertController = UIAlertController(title: "Empty Thoughts",
+                                                message: "Please add your title or thoughts texts",
+                                                preferredStyle: .alert)
+        alertController.view.tintColor = .orange
+        
+        let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(defaultAction)
+        
+        present(alertController, animated: true, completion: nil)
     }
+    
 }
 
 // MARK: - SwiftUI Preview

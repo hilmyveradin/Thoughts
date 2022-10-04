@@ -9,11 +9,10 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-//TODO: Analyze this VM Functionality
-class ThoughtListViewModel {
+final class ThoughtListViewModel {
     
     private var texts = BehaviorRelay<[Texts]>(value: [])
-    private var disposeBag = DisposeBag()
+    private let disposeBag = DisposeBag()
     
     init() {
         fetchTextsAndUpdateObservableTodos()
@@ -34,7 +33,6 @@ class ThoughtListViewModel {
         print("View Model: fetch texts")
         // Model Interaction
         ThoughtsManagerCoreData.shared.fetchObservableData()
-            .map({ $0 })
             .subscribe(onNext: { (todos) in
                 self.texts.accept(todos)
             })

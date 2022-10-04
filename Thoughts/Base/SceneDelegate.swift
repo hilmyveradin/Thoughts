@@ -17,7 +17,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         maybeOpenedFromWidget(urlContexts: connectionOptions.urlContexts)
         
-        let home = ThoughtListViewController()
+        let home = ThoughtListViewController(viewModel: ThoughtListViewModel())
         let navigationController = UINavigationController(rootViewController: home)
         
         guard let windowScene = (scene as? UIWindowScene) else { return }
