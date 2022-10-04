@@ -18,6 +18,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         maybeOpenedFromWidget(urlContexts: connectionOptions.urlContexts)
         
         let home = ThoughtListViewController(viewModel: ThoughtListViewModel())
+//        let home = ThoughtsDetailViewController()
         let navigationController = UINavigationController(rootViewController: home)
         
         guard let windowScene = (scene as? UIWindowScene) else { return }

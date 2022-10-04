@@ -10,7 +10,7 @@ import CoreData
 import RxSwift
 import RxCocoa
 
-class ThoughtListViewController: UIViewController {
+final class ThoughtListViewController: UIViewController {
     
     // MARK: - PROPERTIES
     // MARK: UI COMPONENT
@@ -38,10 +38,6 @@ class ThoughtListViewController: UIViewController {
         super.init(nibName: nil, bundle: nil)
     }
     
-//    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
-//        super.init(nibName: nil, bundle: nil)
-//    }
-    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -53,6 +49,7 @@ class ThoughtListViewController: UIViewController {
         setupView()
         observableTextsTableView()
         setupTodoListTableViewCellWhenDeleted()
+        observableTapTableView()
     }
     
     // MARK: - Helpers
@@ -102,7 +99,8 @@ extension ThoughtListViewController {
     private func observableTextsTableView() {
         let observableTexts = thoughtListViewModel.getTexts().asObservable()
         observableTexts.bind(to: tableView.rx.items(cellIdentifier: "DefaultCell",
-                                                    cellType: ThoughtsCell.self)) { (_, element, cell) in
+                                                    cellType: ThoughtsCell.self)) { [weak self] (_, element, cell) in
+            guard let self = self else { return }
             cell.thoughtsTitle.text = element.textTitle
             cell.thoughtsDesc.text = element.textDescription
             
@@ -112,11 +110,30 @@ extension ThoughtListViewController {
     
     private func setupTodoListTableViewCellWhenDeleted() {
         tableView.rx.itemDeleted
-            .subscribe(onNext: { indexPath in
+            .subscribe(onNext: { [weak self] indexPath in
+                guard let self = self else { return }
                 self.thoughtListViewModel.removeTodo(withIndex: indexPath.row)
             })
             .disposed(by: disposeBag)
     }
+    
+//    private func observableTapTableView() {
+//        tableView.rx.itemSelected.subscribe(onNext: { IndexPath in
+//            let vc = ThoughtsDetailViewController()
+//            let row = IndexPath.row
+//        })
+//        .disposed(by: disposeBag)
+//    }
+    
+        private func observableTapTableView() {
+            tableView.rx.modelSelected(Texts.self).subscribe { [weak self] model in
+                guard let self = self else { return }
+                let model = model
+                let vc = ThoughtsDetailViewController(model: model)
+                self.present(vc, animated: true)
+            }.disposed(by: disposeBag)
+
+        }
 }
 
 // MARK: - SwiftUI Preview

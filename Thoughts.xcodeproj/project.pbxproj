@@ -39,7 +39,9 @@
 		01D0893A2816953C00E9E9FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01D089392816953C00E9E9FF /* Assets.xcassets */; };
 		01D0893D2816953C00E9E9FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01D0893B2816953C00E9E9FF /* LaunchScreen.storyboard */; };
 		01D0896A28169BC300E9E9FF /* AnchorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D0896928169BC300E9E9FF /* AnchorExtensions.swift */; };
-		01D0896C28169C7900E9E9FF /* ProgrammaticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D0896B28169C7900E9E9FF /* ProgrammaticView.swift */; };
+		01E7BDB728EC9181007E3F67 /* ThoughtsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E7BDB628EC9181007E3F67 /* ThoughtsDetailViewController.swift */; };
+		01E7BDB928EC924B007E3F67 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01E7BDB828EC924B007E3F67 /* Storyboard.storyboard */; };
+		01E7BDBB28EC9605007E3F67 /* ThoughtsDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E7BDBA28EC9605007E3F67 /* ThoughtsDetailViewModel.swift */; };
 		AA3E3A4A53B294F41F792336 /* Pods_Thoughts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2797F93AE4612DB154FF15F /* Pods_Thoughts.framework */; };
 /* End PBXBuildFile section */
 
@@ -89,7 +91,9 @@
 		01D0893C2816953C00E9E9FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		01D0893E2816953C00E9E9FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01D0896928169BC300E9E9FF /* AnchorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnchorExtensions.swift; sourceTree = "<group>"; };
-		01D0896B28169C7900E9E9FF /* ProgrammaticView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgrammaticView.swift; sourceTree = "<group>"; };
+		01E7BDB628EC9181007E3F67 /* ThoughtsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThoughtsDetailViewController.swift; sourceTree = "<group>"; };
+		01E7BDB828EC924B007E3F67 /* Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		01E7BDBA28EC9605007E3F67 /* ThoughtsDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThoughtsDetailViewModel.swift; sourceTree = "<group>"; };
 		1FE9A51CE0A4698F4CB12126 /* Pods-Thoughts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Thoughts.debug.xcconfig"; path = "Target Support Files/Pods-Thoughts/Pods-Thoughts.debug.xcconfig"; sourceTree = "<group>"; };
 		48C6BF922A5C949F54D68AD9 /* Pods-ThoughtsWidgetExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThoughtsWidgetExtension.release.xcconfig"; path = "Target Support Files/Pods-ThoughtsWidgetExtension/Pods-ThoughtsWidgetExtension.release.xcconfig"; sourceTree = "<group>"; };
 		877320CC35885B8CC68D82CA /* Pods-Thoughts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Thoughts.release.xcconfig"; path = "Target Support Files/Pods-Thoughts/Pods-Thoughts.release.xcconfig"; sourceTree = "<group>"; };
@@ -176,7 +180,6 @@
 				01D089462816957300E9E9FF /* ViewController */,
 				01D089472816958500E9E9FF /* ViewModel */,
 				01D089452816956A00E9E9FF /* View */,
-				01D0896D28169C8000E9E9FF /* Protocols */,
 				019CDB672817DA680066D10B /* Manager */,
 				01D089392816953C00E9E9FF /* Assets.xcassets */,
 				01D0893E2816953C00E9E9FF /* Info.plist */,
@@ -209,6 +212,8 @@
 			children = (
 				01D089342816953B00E9E9FF /* ThoughtListViewController.swift */,
 				016124642816BDAE006ACB35 /* AddThoughtsViewController.swift */,
+				01E7BDB628EC9181007E3F67 /* ThoughtsDetailViewController.swift */,
+				01E7BDB828EC924B007E3F67 /* Storyboard.storyboard */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -218,6 +223,7 @@
 			children = (
 				01419F702818E23A0095A17A /* ThoughtListViewModel.swift */,
 				012EF49028E9E4AC00B8A092 /* AddThoughtsViewModel.swift */,
+				01E7BDBA28EC9605007E3F67 /* ThoughtsDetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -228,14 +234,6 @@
 				019CDB622817CEFB0066D10B /* ThoughtsData.xcdatamodeld */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		01D0896D28169C8000E9E9FF /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				01D0896B28169C7900E9E9FF /* ProgrammaticView.swift */,
-			);
-			path = Protocols;
 			sourceTree = "<group>";
 		};
 		BD27C05962107122DF23E11B /* Pods */ = {
@@ -346,6 +344,7 @@
 			files = (
 				01D0893D2816953C00E9E9FF /* LaunchScreen.storyboard in Resources */,
 				01D0893A2816953C00E9E9FF /* Assets.xcassets in Resources */,
+				01E7BDB928EC924B007E3F67 /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,17 +422,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01D0896C28169C7900E9E9FF /* ProgrammaticView.swift in Sources */,
 				01D0896A28169BC300E9E9FF /* AnchorExtensions.swift in Sources */,
 				019CDB642817CEFB0066D10B /* ThoughtsData.xcdatamodeld in Sources */,
 				01D089352816953B00E9E9FF /* ThoughtListViewController.swift in Sources */,
 				012EF49128E9E4AC00B8A092 /* AddThoughtsViewModel.swift in Sources */,
+				01E7BDBB28EC9605007E3F67 /* ThoughtsDetailViewModel.swift in Sources */,
 				01419F75281A31780095A17A /* ThoughtsManagerCoreData.swift in Sources */,
 				01419F732818EEB40095A17A /* UIColorExtension.swift in Sources */,
 				01D089312816953B00E9E9FF /* AppDelegate.swift in Sources */,
 				016124652816BDAE006ACB35 /* AddThoughtsViewController.swift in Sources */,
 				01419F712818E23A0095A17A /* ThoughtListViewModel.swift in Sources */,
 				019CDB6B2817E83D0066D10B /* ThoughtsCell.swift in Sources */,
+				01E7BDB728EC9181007E3F67 /* ThoughtsDetailViewController.swift in Sources */,
 				01D089332816953B00E9E9FF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

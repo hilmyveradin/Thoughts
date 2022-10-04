@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class ThoughtsCell: UITableViewCell, ProgrammaticView {
+final class ThoughtsCell: UITableViewCell {
     
     // MARK: - Properties
     lazy var thoughtsTitle: UILabel = {

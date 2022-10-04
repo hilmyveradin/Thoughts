@@ -10,10 +10,11 @@ import CoreData
 import RxSwift
 import RxCocoa
 
-class ThoughtsManagerCoreData {
+final class ThoughtsManagerCoreData {
     
     // nanti dibikin conforming to protocol, yang jadi dependency di VM bukan class-nya, tapi protocolnya
     static let shared = ThoughtsManagerCoreData()
+    private init() { }
     
     // MARK: - Basic Function
     lazy var managedContext: NSManagedObjectContext = {
