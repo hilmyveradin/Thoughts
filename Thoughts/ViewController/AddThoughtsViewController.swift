@@ -70,8 +70,6 @@ final class AddThoughtsViewController: UIViewController {
         setupView()
         rxDoneAction()
         rxCancelAction()
-//        let titleText = titleTextField.rx.text.orEmpty.asDriver()
-//        let thoughtsText = thoughtsTextView.rx.text.orEmpty.asDriver()
     }
     
     override func viewWillDisappear(_ animated: Bool) {

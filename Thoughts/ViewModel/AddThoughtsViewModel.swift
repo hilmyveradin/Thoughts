@@ -12,8 +12,6 @@ import RxCocoa
 final class AddThoughtListViewModel {
     
     //MARK: - PROPERTIES
-    private let disposeBag = DisposeBag()
-    private var texts = BehaviorRelay<[Texts]>(value: [])
     
     init() {
         

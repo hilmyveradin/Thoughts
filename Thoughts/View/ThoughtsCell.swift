@@ -39,6 +39,12 @@ final class ThoughtsCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    func configure(viewModel: ThoughtsCellViewModel) {
+        thoughtsTitle.text = viewModel.title
+        thoughtsDesc.text = viewModel.description
+    }
+
+    
     // MARK: - Setup Views
     func setupView() {
         addSubview(thoughtsTitle)

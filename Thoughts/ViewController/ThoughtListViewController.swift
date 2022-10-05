@@ -99,11 +99,11 @@ extension ThoughtListViewController {
     private func observableTextsTableView() {
         let observableTexts = thoughtListViewModel.getTexts().asObservable()
         observableTexts.bind(to: tableView.rx.items(cellIdentifier: "DefaultCell",
-                                                    cellType: ThoughtsCell.self)) { [weak self] (_, element, cell) in
+                                                    cellType: ThoughtsCell.self)) { [weak self] (index, element, cell) in
             guard let self = self else { return }
-            cell.thoughtsTitle.text = element.textTitle
-            cell.thoughtsDesc.text = element.textDescription
-            
+            if let cellViewModel = self.thoughtListViewModel.viewModelForMovie(at: index) {
+                cell.configure(viewModel: cellViewModel)
+            }
         }.disposed(by: disposeBag)
         
     }
@@ -117,23 +117,15 @@ extension ThoughtListViewController {
             .disposed(by: disposeBag)
     }
     
-//    private func observableTapTableView() {
-//        tableView.rx.itemSelected.subscribe(onNext: { IndexPath in
-//            let vc = ThoughtsDetailViewController()
-//            let row = IndexPath.row
-//        })
-//        .disposed(by: disposeBag)
-//    }
-    
-        private func observableTapTableView() {
-            tableView.rx.modelSelected(Texts.self).subscribe { [weak self] model in
-                guard let self = self else { return }
-                let model = model
-                let vc = ThoughtsDetailViewController(model: model)
-                self.present(vc, animated: true)
-            }.disposed(by: disposeBag)
-
-        }
+    private func observableTapTableView() {
+        tableView.rx.modelSelected(Texts.self).subscribe { [weak self] model in
+            guard let self = self else { return }
+            let model = model
+            let vc = ThoughtsDetailViewController(model: model)
+            self.present(vc, animated: true)
+        }.disposed(by: disposeBag)
+        
+    }
 }
 
 // MARK: - SwiftUI Preview

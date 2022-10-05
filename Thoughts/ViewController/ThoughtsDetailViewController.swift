@@ -29,13 +29,14 @@ final class ThoughtsDetailViewController: UIViewController {
     
     let model: Texts
     
-    let viewModel: ThoughtsDetailViewModel
-    let disposeBag = DisposeBag()
+    //TODO: Discuss, How can we utilize this VM?
+//    let viewModel: ThoughtsDetailViewModel
+//    let disposeBag = DisposeBag()
     
     //MARK: - INITIALIZATION
-    init(viewModel: ThoughtsDetailViewModel = ThoughtsDetailViewModel(), model: Texts) {
+    init(/*viewModel: ThoughtsDetailViewModel = ThoughtsDetailViewModel(),*/ model: Texts) {
         self.model = model
-        self.viewModel = viewModel
+//        self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
     

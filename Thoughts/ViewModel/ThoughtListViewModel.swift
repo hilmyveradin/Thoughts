@@ -28,10 +28,16 @@ final class ThoughtListViewModel {
         ThoughtsManagerCoreData.shared.removeTexts(withIndex: index)
     }
     
+    func viewModelForMovie(at index: Int) -> ThoughtsCellViewModel? {
+      guard index < texts.value.count else {
+        return nil
+      }
+        return ThoughtsCellViewModel(texts: texts.value[index])
+    }
+    
     //MARK: - Private
     private func fetchTextsAndUpdateObservableTodos() {
         print("View Model: fetch texts")
-        // Model Interaction
         ThoughtsManagerCoreData.shared.fetchObservableData()
             .subscribe(onNext: { (todos) in
                 self.texts.accept(todos)
