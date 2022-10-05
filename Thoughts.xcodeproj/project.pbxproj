@@ -96,6 +96,7 @@
 		01E7BDB828EC924B007E3F67 /* Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		01E7BDBA28EC9605007E3F67 /* ThoughtsDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThoughtsDetailViewModel.swift; sourceTree = "<group>"; };
 		01E7BDE028ED6511007E3F67 /* ThoughtsCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThoughtsCellViewModel.swift; sourceTree = "<group>"; };
+		01E7BDE428ED7DD7007E3F67 /* Empty.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Empty.md; sourceTree = "<group>"; };
 		1FE9A51CE0A4698F4CB12126 /* Pods-Thoughts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Thoughts.debug.xcconfig"; path = "Target Support Files/Pods-Thoughts/Pods-Thoughts.debug.xcconfig"; sourceTree = "<group>"; };
 		48C6BF922A5C949F54D68AD9 /* Pods-ThoughtsWidgetExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThoughtsWidgetExtension.release.xcconfig"; path = "Target Support Files/Pods-ThoughtsWidgetExtension/Pods-ThoughtsWidgetExtension.release.xcconfig"; sourceTree = "<group>"; };
 		877320CC35885B8CC68D82CA /* Pods-Thoughts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Thoughts.release.xcconfig"; path = "Target Support Files/Pods-Thoughts/Pods-Thoughts.release.xcconfig"; sourceTree = "<group>"; };
@@ -227,6 +228,7 @@
 				012EF49028E9E4AC00B8A092 /* AddThoughtsViewModel.swift */,
 				01E7BDBA28EC9605007E3F67 /* ThoughtsDetailViewModel.swift */,
 				01E7BDE028ED6511007E3F67 /* ThoughtsCellViewModel.swift */,
+				01E7BDE428ED7DD7007E3F67 /* Empty.md */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";

@@ -7,7 +7,7 @@
 
 import Foundation
 
-class ThoughtsCellViewModel {
+final class ThoughtsCellViewModel {
     
     private var texts: Texts
     
