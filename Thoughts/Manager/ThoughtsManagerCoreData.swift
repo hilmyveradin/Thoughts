@@ -31,7 +31,7 @@ final class ThoughtsManagerCoreData {
         return container
     }()
     
-    func saveContext () {
+    private func saveContext () {
         guard managedContext.hasChanges else { return }
         
         do {

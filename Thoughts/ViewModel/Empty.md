@@ -5,3 +5,6 @@
 Also, It won't be injected since the initialization is made private (to prevent another object creation)
 
 
+
+component listen ke driver, driver listen ke publisher, publisher listen ke event (janlup di binding dulu)
+event -> button tap, viewdidload

@@ -10,11 +10,13 @@ import RxSwift
 import RxCocoa
 
 final class AddThoughtListViewModel {
-    
+    typealias SaveThoughts =  (_ titleText: String, _ descText: String, _ date: Date) -> Void
     //MARK: - PROPERTIES
+    let saveThoughts: SaveThoughts
     
-    init() {
-        
+    init(saveThoughts: @escaping SaveThoughts = ThoughtsManagerCoreData.shared.saveThought(titleText:descText:date:)) {
+        // pas init bisa di configure sesuai kebutuhan
+        self.saveThoughts = saveThoughts
     }
     
     func checkIsTextValid(_ titleText: String, _ descriptionText: String) -> Bool {
@@ -24,7 +26,7 @@ final class AddThoughtListViewModel {
         }
         
         let date = Date()
-        ThoughtsManagerCoreData.shared.saveThought(titleText: titleText, descText: descriptionText, date: date)
+        self.saveThoughts(titleText, descriptionText, date)
         
         return true
     }

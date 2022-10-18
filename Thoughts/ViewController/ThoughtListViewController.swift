@@ -101,7 +101,7 @@ extension ThoughtListViewController {
         observableTexts.bind(to: tableView.rx.items(cellIdentifier: "DefaultCell",
                                                     cellType: ThoughtsCell.self)) { [weak self] (index, element, cell) in
             guard let self = self else { return }
-            if let cellViewModel = self.thoughtListViewModel.viewModelForMovie(at: index) {
+            if let cellViewModel = self.thoughtListViewModel.viewModelForText(at: index) {
                 cell.configure(viewModel: cellViewModel)
             }
         }.disposed(by: disposeBag)
@@ -112,6 +112,7 @@ extension ThoughtListViewController {
         tableView.rx.itemDeleted
             .subscribe(onNext: { [weak self] indexPath in
                 guard let self = self else { return }
+                // kak septi : kalau pake guard make sure ini kepanggil. ga semua harus pake guard let
                 self.thoughtListViewModel.removeTodo(withIndex: indexPath.row)
             })
             .disposed(by: disposeBag)
@@ -119,12 +120,10 @@ extension ThoughtListViewController {
     
     private func observableTapTableView() {
         tableView.rx.modelSelected(Texts.self).subscribe { [weak self] model in
-            guard let self = self else { return }
-            let model = model
-            let vc = ThoughtsDetailViewController(model: model)
-            self.present(vc, animated: true)
+            let viewModel = ThoughtsDetailViewModel(model: model)
+            let vc = ThoughtsDetailViewController(viewModel: viewModel)
+            self?.present(vc, animated: true)
         }.disposed(by: disposeBag)
-        
     }
 }
 

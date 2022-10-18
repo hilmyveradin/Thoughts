@@ -16,27 +16,25 @@ final class ThoughtsDetailViewController: UIViewController {
     private lazy var titleLabel: UILabel = {
         let lbl = UILabel()
         lbl.font = UIFont.systemFont(ofSize: 18)
-        lbl.text = "foo"
         return lbl
     }()
     
     private lazy var descriptionLabel: UILabel = {
         let lbl = UILabel()
         lbl.font = UIFont.systemFont(ofSize: 18)
-        lbl.text = "bar"
         return lbl
     }()
     
-    let model: Texts
+//    let model: Texts
     
     //TODO: Discuss, How can we utilize this VM?
-//    let viewModel: ThoughtsDetailViewModel
-//    let disposeBag = DisposeBag()
+    let viewModel: ThoughtsDetailViewModel
+    let disposeBag = DisposeBag()
     
     //MARK: - INITIALIZATION
-    init(/*viewModel: ThoughtsDetailViewModel = ThoughtsDetailViewModel(),*/ model: Texts) {
-        self.model = model
-//        self.viewModel = viewModel
+    init(viewModel: ThoughtsDetailViewModel) {
+//        self.model = model
+        self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -47,8 +45,12 @@ final class ThoughtsDetailViewController: UIViewController {
     //MARK: - LIFE CYCLES
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
+        view.backgroundColor = .white
         setupView()
+        // drive() is to "listen" in Driver
+        viewModel.title.drive(titleLabel.rx.text).disposed(by: disposeBag)
+        viewModel.description.drive(descriptionLabel.rx.text).disposed(by: disposeBag)
+        viewModel.populateData()
     }
     
     //MARK: - PRIVATE
@@ -60,7 +62,8 @@ final class ThoughtsDetailViewController: UIViewController {
         descriptionLabel.anchor(top: titleLabel.safeAreaLayoutGuide.bottomAnchor, paddingTop: 30,
                                 width: 200,
                                 centerX: view.centerXAnchor)
-        titleLabel.text = model.textTitle!
-        descriptionLabel.text = model.textDescription!
+//        titleLabel.text = model.textTitle!
+//        descriptionLabel.text = model.textDescription!
+        // pake binding
     }
 }

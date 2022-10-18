@@ -28,7 +28,7 @@ final class ThoughtListViewModel {
         ThoughtsManagerCoreData.shared.removeTexts(withIndex: index)
     }
     
-    func viewModelForMovie(at index: Int) -> ThoughtsCellViewModel? {
+    func viewModelForText(at index: Int) -> ThoughtsCellViewModel? {
       guard index < texts.value.count else {
         return nil
       }
