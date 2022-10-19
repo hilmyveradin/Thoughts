@@ -9,7 +9,26 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-final class ThoughtListViewModel {
+protocol ThoughtListViewModelType: AnyObject {
+    func transform(_ input: ThoughtListViewModel.Input) -> ThoughtListViewModel.Output
+}
+
+final class ThoughtListViewModel: ThoughtListViewModelType {
+    
+    // MARK: Input / Output
+    struct Input {
+        let textInput: Observable<Void>
+    }
+    
+    struct Output {
+        let textDriver: Driver<String>
+    }
+    
+    func transform(_ input: Input) -> Output {
+        let textDriver = input.textInput.asDriverOnErrorJustComplete()
+        
+        return Output(textDriver: textDriver)
+    }
     
     private var texts = BehaviorRelay<[Texts]>(value: [])
     private let disposeBag = DisposeBag()

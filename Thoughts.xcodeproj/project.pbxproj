@@ -43,6 +43,7 @@
 		01E7BDB928EC924B007E3F67 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01E7BDB828EC924B007E3F67 /* Storyboard.storyboard */; };
 		01E7BDBB28EC9605007E3F67 /* ThoughtsDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E7BDBA28EC9605007E3F67 /* ThoughtsDetailViewModel.swift */; };
 		01E7BDE128ED6511007E3F67 /* ThoughtsCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E7BDE028ED6511007E3F67 /* ThoughtsCellViewModel.swift */; };
+		01ED38C228FEBA1E008A0BD5 /* Extension+RxSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01ED38C128FEBA1D008A0BD5 /* Extension+RxSwift.swift */; };
 		AA3E3A4A53B294F41F792336 /* Pods_Thoughts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2797F93AE4612DB154FF15F /* Pods_Thoughts.framework */; };
 /* End PBXBuildFile section */
 
@@ -97,6 +98,7 @@
 		01E7BDBA28EC9605007E3F67 /* ThoughtsDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThoughtsDetailViewModel.swift; sourceTree = "<group>"; };
 		01E7BDE028ED6511007E3F67 /* ThoughtsCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThoughtsCellViewModel.swift; sourceTree = "<group>"; };
 		01E7BDE428ED7DD7007E3F67 /* Empty.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Empty.md; sourceTree = "<group>"; };
+		01ED38C128FEBA1D008A0BD5 /* Extension+RxSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+RxSwift.swift"; sourceTree = "<group>"; };
 		1FE9A51CE0A4698F4CB12126 /* Pods-Thoughts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Thoughts.debug.xcconfig"; path = "Target Support Files/Pods-Thoughts/Pods-Thoughts.debug.xcconfig"; sourceTree = "<group>"; };
 		48C6BF922A5C949F54D68AD9 /* Pods-ThoughtsWidgetExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThoughtsWidgetExtension.release.xcconfig"; path = "Target Support Files/Pods-ThoughtsWidgetExtension/Pods-ThoughtsWidgetExtension.release.xcconfig"; sourceTree = "<group>"; };
 		877320CC35885B8CC68D82CA /* Pods-Thoughts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Thoughts.release.xcconfig"; path = "Target Support Files/Pods-Thoughts/Pods-Thoughts.release.xcconfig"; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 				01D089472816958500E9E9FF /* ViewModel */,
 				01D089452816956A00E9E9FF /* View */,
 				019CDB672817DA680066D10B /* Manager */,
+				01ED38C128FEBA1D008A0BD5 /* Extension+RxSwift.swift */,
 				01D089392816953C00E9E9FF /* Assets.xcassets */,
 				01D0893E2816953C00E9E9FF /* Info.plist */,
 			);
@@ -441,6 +444,7 @@
 				01E7BDE128ED6511007E3F67 /* ThoughtsCellViewModel.swift in Sources */,
 				01E7BDB728EC9181007E3F67 /* ThoughtsDetailViewController.swift in Sources */,
 				01D089332816953B00E9E9FF /* SceneDelegate.swift in Sources */,
+				01ED38C228FEBA1E008A0BD5 /* Extension+RxSwift.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
